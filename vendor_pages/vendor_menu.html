@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://demo.tastyigniter.com/admin/menus -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+	<link href="https://demo.tastyigniter.com/admin/views/themes/tastyigniter-blue/images/favicon.ico" rel="shortcut icon" type="image/ico">
+	<title>Menus ‹ Administrator Panel ‹ TastyIgniter Demo — TastyIgniter</title>
+	<link href="vendor_menu_files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font-awesome-css">
+		<link href="vendor_menu_files/metisMenu.min.css" rel="stylesheet" type="text/css" id="metis-menu-css">
+		<link href="vendor_menu_files/select2.css" rel="stylesheet" type="text/css" id="select2-css">
+		<link href="vendor_menu_files/select2-bootstrap.css" rel="stylesheet" type="text/css" id="select2-bootstrap-css">
+		<link href="vendor_menu_files/jquery.raty.css" rel="stylesheet" type="text/css" id="jquery-raty-css">
+		<link href="vendor_menu_files/fonts.css" rel="stylesheet" type="text/css" id="fonts-css">
+		<link href="vendor_menu_files/stylesheet.css" rel="stylesheet" type="text/css" id="stylesheet-css">
+	<script src="vendor_menu_files/jquery-1.11.2.min.js.download" charset="utf-8" type="text/javascript" id="jquery-js"></script>
+		<script src="vendor_menu_files/bootstrap.min.js.download" charset="utf-8" type="text/javascript" id="bootstrap-js"></script>
+		<script src="vendor_menu_files/metisMenu.min.js.download" charset="utf-8" type="text/javascript" id="metis-menu-js"></script>
+		<script src="vendor_menu_files/select2.js.download" charset="utf-8" type="text/javascript" id="select-2-js"></script>
+		<script src="vendor_menu_files/jquery.raty.js.download" charset="utf-8" type="text/javascript" id="jquery-raty-js"></script>
+		<script src="vendor_menu_files/js.cookie.js.download" charset="utf-8" type="text/javascript" id="js-cookie-js"></script>
+		<script src="vendor_menu_files/common.js.download" charset="utf-8" type="text/javascript" id="common-js"></script>	<script type="text/javascript">
+		var js_site_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var js_base_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var active_menu = 'menus';
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[title], span[title], button[title]').tooltip({placement: 'bottom'});
+			$('select.form-control').select2({minimumResultsForSearch: 10});
+
+			$('.alert').alert();
+			$('.dropdown-toggle').dropdown();
+
+			$("#list-form td:contains('Disabled')").addClass('red');
+		});
+	</script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="wrapper" class="">
+		<nav class="navbar navbar-static-top navbar-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+                    <div class="navbar-brand">
+                            <div class="navbar-logo col-xs-3">
+                                <img class="logo-image" alt="TastyIgniter" title="TastyIgniter" style="width:37px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg">
+                            </div>
+                        </div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            </div>
+
+							<div class="navbar-default sidebar" role="navigation">
+					<div class="sidebar-nav navbar-collapse">
+                            <ul class="nav" id="side-menu">
+                                    <li><a class="dashboard admin" href="vendor_menu.html"><i class="fa fa-dashboard fa-fw"></i><span class="content">Dashboard</span></a>
+                                    </li>
+                                    <li><a class="Kitchen active" href="#"><i class="fa fa-cutlery fa-fw"></i><span class="content">Menus</span><span class="fa arrow"></span></a></li>
+                                       
+                                    <li><a class="sales" href="vendor_order.html"><i class="fa fa-bar-chart-o fa-fw"></i><span class="content">Orders</span><span class="fa arrow"></span></a></li>
+                                    
+                                    <li><a class="hidden-xs sidebar-toggle"><i class="fa fa-chevron-circle-left fa-fw"></i><span class="content">Collapse Menu</span></a></li></ul>				</div>
+				</div>
+
+                <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu  dropdown-user">
+                                <li>
+                                    <div class="row wrap-vertical text-center">
+                                        <div class="col-xs-12 wrap-top">
+                                            <img class="img-rounded" src="./menu_edit_files/7c4ff521986b4ff8d29440beec01972d.png">
+                                        </div>
+                                        <div class="col-xs-12 wrap-none wrap-top wrap-right">
+                                            <span>
+                                                <strong>Demo Adminm</strong>
+                                            </span>
+                                            <span class="small">
+                                                <i>(demo)</i>
+                                            </span>
+                                            <br>
+                                            <span class="small text-uppercase">Demo</span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;Edit Details</a>
+                                </li>
+                                <li>
+                                    <a class="list-group-item-danger" href="">
+                                        <i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;Logout</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;About TastyIgniter</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;Community Support</a>
+                                </li>
+                                <li class="menu-footer"></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+				<h1 class="navbar-heading">
+					Menus
+									</h1>
+					</nav>
+
+		<div id="page-wrapper" style="min-height: 513px; height: 100%;">
+							<div class="page-header clearfix">
+                    
+                   						<div class="page-action">
+                            
+                                                            <a class="btn btn-primary" href="menu_edit.html"><i class="fa fa-plus"></i> New</a>
+		<a class="btn btn-danger" onclick="confirmDelete();"><i class="fa fa-trash-o"></i> Delete</a>                            						</div>
+									</div>
+
+				
+				<div id="notification">
+									</div>
+			
+    <div class="row content">
+        <div class="col-md-12">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Menu Item List</h3>
+
+                    <div class="pull-right">
+                        <button class="btn btn-filter btn-xs"><i class="fa fa-filter"></i></button>
+                    </div>
+                </div>
+               
+
+                <form role="form" id="list-form">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-border">
+                            <thead>
+                            <tr>
+
+                                <th class="name">
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=menu_name&amp;order_by=DESC">Name                                        <i class="fa fa-sort-ASC"></i></a>
+                                </th>
+                                <th>
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=menu_price&amp;order_by=DESC">Price                                        <i class="fa fa-sort-ASC"></i></a>
+                                </th>
+                                <th>Category</th>
+                                <th>
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=stock_qty&amp;order_by=DESC">Stock Qty                                        <i class="fa fa-sort-ASC"></i></a>
+                                </th>
+                                <th class="text-center">Status</th>
+                                <th class="id">
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=menus.menu_id&amp;order_by=DESC">ID                                        <i class="fa fa-sort-ASC active"></i></a>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                    <tr id="76">
+                                        <td class="action">
+                                            <input type="checkbox" value="76" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=76" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/puff_puff.jpg"></td>-->
+                                        <td class="name">PUFF-PUFF</td>
+                                        <td class="left">£4.99&nbsp;&nbsp;
+                                                                                            <a title="" data-original-title="Special has expired"><i class="fa fa-star fa-star-special disabled"></i></a>
+                                                                                    </td>
+                                        <td class="left"></td>
+                                        <td class="left">856</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">76</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript"><!--
+        function filterList() {
+            $('#filter-form').submit();
+        }
+        //--></script>
+</div>
+<div id="footer" class="">
+	<div class="row navbar-footer">
+		<div class="col-sm-12 text-version">
+			<p class="col-xs-9 wrap-none">Thank you for using <a target="_blank" href="http://tastyigniter.com/">FoodExpress</a></p>
+			<p class="col-xs-3 text-right wrap-none">Version 0.1</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	if (document.location.toString().toLowerCase().indexOf(active_menu, 1) != -1) {
+		$('#side-menu .' + active_menu).addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').parent().addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+    }
+
+    if (window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		$('html,body').animate({scrollTop: $('#wrapper').offset().top - 45}, 800);
+        $('#nav-tabs a[href="#'+hash+'"]').tab('show');
+    }
+
+    $('.btn-group input[type="radio"]:checked, .btn-group .active input[type="radio"]').trigger('change');
+});
+
+function confirmDelete(form) {
+	if ($('input[name="delete[]"]:checked').length && confirm('This cannot be undone! Are you sure you want to do this?')) {
+		form = (typeof form === 'undefined' || form === null) ? 'list-form' : form;
+		$('#'+form).submit();
+	} else {
+		return false;
+	}
+}
+
+function saveClose() {
+	$('#edit-form').append('<input type="hidden" name="save_close" value="1" />');
+	$('#edit-form').submit();
+}
+</script>
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>

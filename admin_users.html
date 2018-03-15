@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://demo.tastyigniter.com/admin/customers -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+	<link href="https://demo.tastyigniter.com/admin/views/themes/tastyigniter-blue/images/favicon.ico" rel="shortcut icon" type="image/ico">
+	<title>Customers ‹ Administrator Panel ‹ TastyIgniter Demo — TastyIgniter</title>
+	<link href="admin_users_files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font-awesome-css">
+		<link href="admin_users_files/metisMenu.min.css" rel="stylesheet" type="text/css" id="metis-menu-css">
+		<link href="admin_users_files/select2.css" rel="stylesheet" type="text/css" id="select2-css">
+		<link href="admin_users_files/select2-bootstrap.css" rel="stylesheet" type="text/css" id="select2-bootstrap-css">
+		<link href="admin_users_files/jquery.raty.css" rel="stylesheet" type="text/css" id="jquery-raty-css">
+		<link href="admin_users_files/fonts.css" rel="stylesheet" type="text/css" id="fonts-css">
+		<link href="admin_users_files/stylesheet.css" rel="stylesheet" type="text/css" id="stylesheet-css">
+	<script src="admin_users_files/jquery-1.11.2.min.js.download" charset="utf-8" type="text/javascript" id="jquery-js"></script>
+		<script src="admin_users_files/bootstrap.min.js.download" charset="utf-8" type="text/javascript" id="bootstrap-js"></script>
+		<script src="admin_users_files/metisMenu.min.js.download" charset="utf-8" type="text/javascript" id="metis-menu-js"></script>
+		<script src="admin_users_files/select2.js.download" charset="utf-8" type="text/javascript" id="select-2-js"></script>
+		<script src="admin_users_files/jquery.raty.js.download" charset="utf-8" type="text/javascript" id="jquery-raty-js"></script>
+		<script src="admin_users_files/js.cookie.js.download" charset="utf-8" type="text/javascript" id="js-cookie-js"></script>
+		<script src="admin_users_files/common.js.download" charset="utf-8" type="text/javascript" id="common-js"></script>	<script type="text/javascript">
+		var js_site_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var js_base_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var active_menu = 'customers';
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[title], span[title], button[title]').tooltip({placement: 'bottom'});
+			$('select.form-control').select2({minimumResultsForSearch: 10});
+
+			$('.alert').alert();
+			$('.dropdown-toggle').dropdown();
+
+			$("#list-form td:contains('Disabled')").addClass('red');
+		});
+	</script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="wrapper" class="">
+		<nav class="navbar navbar-static-top navbar-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+					<div class="navbar-brand">
+                            <div class="navbar-logo col-xs-3">
+                                <img class="logo-image" alt="TastyIgniter" title="TastyIgniter" style="width:37px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg">
+                            </div>
+                        </div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            </div>
+
+							<div class="navbar-default sidebar" role="navigation">
+								<div class="sidebar-nav navbar-collapse">
+									<ul class="nav" id="side-menu">
+											<li>
+												<a class="dashboard admin active" href="#"><i class="fa fa-dashboard fa-fw"></i><span class="content">Dashboard</span></a>
+											</li>
+											<li><a class="kitchen"><i class="fa fa-cutlery fa-fw"></i><span class="content">Kitchen</span><span class="fa arrow"></span></a>
+												<ul class="nav nav-second-level collapse">
+													<li><a class="menus" href="admin_menu.html"><i class="fa fa-square-o fa-fw"></i>Menus</a></li>
+				
+													<li><a class="categories" href="admin_category.html"><i class="fa fa-square-o fa-fw"></i>Categories</a></li>
+												</ul></li>
+											<li><a class="sales"><i class="fa fa-bar-chart-o fa-fw"></i><span class="content">Sales</span><span class="fa arrow"></span></a>
+														<ul class="nav nav-second-level collapse">
+															<li><a class="orders" href="admin_orders.html"><i class="fa fa-square-o fa-fw"></i>Orders</a></li>
+														</ul></li>
+											<li><a class="users active"><i class="fa fa-user fa-fw"></i><span 
+												class="content">Users</span><span class="fa arrow"></span></a>
+														<ul class="nav nav-second-level collapse"><li><a class="customers" href="admin_users.html"><i class="fa fa-square-o fa-fw"></i>Customers</a></li><li><a class="activities" href="admin_activities.html"><i class="fa fa-square-o fa-fw"></i>Activities</a></li></ul></li>
+				
+														<li><a class="hidden-xs sidebar-toggle"><i class="fa fa-chevron-circle-left fa-fw"></i><span class="content">Collapse Menu</span></a></li></ul>						</div>
+				</div>
+
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown">
+						<a class="front-end" title="" href="https://demo.tastyigniter.com/" target="_blank" data-original-title="Storefront">
+							<i class="fa fa-home"></i>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle messages" data-toggle="dropdown">
+							<i class="fa fa-envelope"></i>
+                            <span class="label label-danger"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-messages">
+                            <li class="menu-header">You have  messages</li>
+                            <li class="menu-body"><ul class="menu message-list">
+            <li>There are no messages available in this folder.</li>
+        <li class="divider"></li>
+    </ul></li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/messages">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle alerts" data-toggle="dropdown">
+							<i class="fa fa-bell"></i>
+						</a>
+                        <ul class="dropdown-menu dropdown-activities">
+                            <li class="menu-header">Recent activities</li>
+                            <li class="menu-body"><ul class="menu activities-list">
+                        <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">01:46 PM&nbsp;-&nbsp;3 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:52 PM&nbsp;-&nbsp;56 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:31 PM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">11:52 AM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:50 AM&nbsp;-&nbsp;2 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> out.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:35 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:34 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:23 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+            </ul>
+</li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/activities">See all activities</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle settings" data-toggle="dropdown">
+							<i class="fa fa-cog"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-settings">
+							<li><a href="https://demo.tastyigniter.com/admin/pages">Pages</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/banners">Banners</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/layouts">Layouts</a></li>
+<!--							<li><a href="--><!--">--><!--</a></li>-->
+							<li><a href="https://demo.tastyigniter.com/admin/error_logs">Error Logs</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/settings">Settings</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-user"></i>
+						</a>
+						<ul class="dropdown-menu  dropdown-user">
+							<li>
+								<div class="row wrap-vertical text-center">
+									<div class="col-xs-12 wrap-top">
+										<img class="img-rounded" src="./admin_users_files/7c4ff521986b4ff8d29440beec01972d.png">
+									</div>
+									<div class="col-xs-12 wrap-none wrap-top wrap-right">
+										<span><strong>Demo Adminm</strong></span>
+										<span class="small"><i>(demo)</i></span><br>
+										<span class="small text-uppercase">Demo</span>
+										<span></span>
+									</div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li><a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12"><i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;Edit Details</a></li>
+							<li><a class="list-group-item-danger" href="https://demo.tastyigniter.com/admin/logout"><i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;Logout</a></li>
+							<li class="divider"></li>
+							<li><a href="http://tastyigniter.com/about/" target="_blank"><i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;About TastyIgniter</a></li>
+							<li><a href="http://docs.tastyigniter.com/" target="_blank"><i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;Documentation</a></li>
+							<li><a href="http://forum.tastyigniter.com/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;Community Support</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+				</ul>
+
+				<h1 class="navbar-heading">
+					Customers
+									</h1>
+					</nav>
+
+		<div id="page-wrapper" style="min-height: 513px; height: 100%;">
+							<div class="page-header clearfix">
+                    
+                   						<div class="page-action">
+                            
+                                                            <a class="btn btn-primary" href="https://demo.tastyigniter.com/admin/customers/edit"><i class="fa fa-plus"></i> New</a>
+		<a class="btn btn-danger" onclick="confirmDelete();"><i class="fa fa-trash-o"></i> Delete</a>                            						</div>
+									</div>
+
+				
+				<div id="notification">
+									</div>
+			
+<div class="row content">
+	<div class="col-md-12">
+		<div class="panel panel-default panel-table">
+			<div class="panel-heading">
+				<h3 class="panel-title">Customer List</h3>
+				<div class="pull-right">
+					<button class="btn btn-filter btn-xs"><i class="fa fa-filter"></i></button>
+				</div>
+			</div>
+			<div class="panel-body panel-filter">
+				<form role="form" id="filter-form" accept-charset="utf-8" method="GET" action="https://demo.tastyigniter.com/admin/customers">
+					<div class="filter-bar">
+						<div class="form-inline">
+							<div class="row">
+								<div class="col-md-3 pull-right text-right">
+									<div class="form-group">
+										<input type="text" name="filter_search" class="form-control input-sm" value="" placeholder="Search customer name or email.">&nbsp;&nbsp;&nbsp;
+									</div>
+									<a class="btn btn-grey" onclick="filterList();" title="" data-original-title="Search"><i class="fa fa-search"></i></a>
+								</div>
+
+								<div class="col-md-8 pull-left">
+									<div class="form-group">
+										<div class="select2-container form-control input-sm" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">View all dates</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><select name="filter_date" class="form-control input-sm select2-offscreen" tabindex="-1" title="">
+											<option value="">View all dates</option>
+																																		<option value="2017-1">January 2017</option>
+																																													<option value="2018-1">January 2018</option>
+																																													<option value="2017-2">February 2017</option>
+																																													<option value="2018-2">February 2018</option>
+																																													<option value="2017-3">March 2017</option>
+																																													<option value="2018-3">March 2018</option>
+																																													<option value="2017-4">April 2017</option>
+																																													<option value="2016-5">May 2016</option>
+																																													<option value="2017-5">May 2017</option>
+																																													<option value="2016-6">June 2016</option>
+																																													<option value="2017-6">June 2017</option>
+																																													<option value="2016-7">July 2016</option>
+																																													<option value="2017-7">July 2017</option>
+																																													<option value="2016-8">August 2016</option>
+																																													<option value="2017-8">August 2017</option>
+																																													<option value="2016-9">September 2016</option>
+																																													<option value="2017-9">September 2017</option>
+																																													<option value="2016-10">October 2016</option>
+																																													<option value="2017-10">October 2017</option>
+																																													<option value="2016-11">November 2016</option>
+																																													<option value="2017-11">November 2017</option>
+																																													<option value="2016-12">December 2016</option>
+																																													<option value="2017-12">December 2017</option>
+																																</select>&nbsp;
+									</div>
+									<div class="form-group">
+										<div class="select2-container form-control input-sm" id="s2id_autogen3"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-4">View all status</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen4" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-4" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen4_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-4" id="s2id_autogen4_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-4">   </ul></div></div><select name="filter_status" class="form-control input-sm select2-offscreen" tabindex="-1" title="">
+											<option value="">View all status</option>
+																					<option value="1">Enabled</option>
+											<option value="0">Disabled</option>
+																				</select>
+									</div>
+									<a class="btn btn-grey" onclick="filterList();" title="" data-original-title="Filter"><i class="fa fa-filter"></i></a>&nbsp;
+									<a class="btn btn-grey" href="https://demo.tastyigniter.com/admin/customers" title="" data-original-title="Clear"><i class="fa fa-times"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<form role="form" id="list-form" accept-charset="utf-8" method="POST" action="https://demo.tastyigniter.com/admin/customers">
+				<div class="table-responsive">
+				<table border="0" class="table table-striped table-border">
+					<thead>
+						<tr>
+							<th class="action action-three"><input type="checkbox" onclick="$(&#39;input[name*=\&#39;delete\&#39;]&#39;).prop(&#39;checked&#39;, this.checked);"></th>
+							<th><a class="sort" href="https://demo.tastyigniter.com/admin/customers?sort_by=first_name&amp;order_by=ASC">First Name<i class="fa fa-sort-DESC"></i></a></th>
+							<th><a class="sort" href="https://demo.tastyigniter.com/admin/customers?sort_by=last_name&amp;order_by=ASC">Last Name<i class="fa fa-sort-DESC"></i></a></th>
+							<th><a class="sort" href="https://demo.tastyigniter.com/admin/customers?sort_by=email&amp;order_by=ASC">Email<i class="fa fa-sort-DESC"></i></a></th>
+							<th>Telephone</th>
+							<th><a class="sort" href="https://demo.tastyigniter.com/admin/customers?sort_by=date_added&amp;order_by=ASC">Date Registered<i class="fa fa-sort-DESC"></i></a></th>
+							<th class="text-center">Status</th>
+							<th class="id"><a class="sort" href="https://demo.tastyigniter.com/admin/customers?sort_by=customer_id&amp;order_by=ASC">ID<i class="fa fa-sort-DESC"></i></a></th>
+						</tr>
+					</thead>
+					<tbody>
+															<tr>
+						<td class="action"><input type="checkbox" value="592" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=592" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=592" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>asdf</td>
+						<td>sdf</td>
+						<td>12345@gmail.com</td>
+						<td>324234234</td>
+						<td>Yesterday</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">592</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="588" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=588" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=588" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>dsad</td>
+						<td>dsad</td>
+						<td>dsadsa@dsadas.com</td>
+						<td>348237432423</td>
+						<td>11 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">588</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="589" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=589" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=589" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>golam</td>
+						<td>kibria</td>
+						<td>gkibria9092@gmail.com</td>
+						<td>01713635726</td>
+						<td>11 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">589</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="590" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=590" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=590" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Paul</td>
+						<td>Lokende</td>
+						<td>paullokende@gmail.com</td>
+						<td>004561559855</td>
+						<td>11 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">590</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="591" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=591" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=591" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>test1</td>
+						<td>test2</td>
+						<td>test111@gmail.com</td>
+						<td>01777676767</td>
+						<td>11 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">591</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="587" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=587" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=587" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>firoj</td>
+						<td>khan</td>
+						<td>firoj.lokswami@gmail.com</td>
+						<td>7987050092</td>
+						<td>10 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">587</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="586" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=586" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=586" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>shubh</td>
+						<td>sat</td>
+						<td>sat@gmail.com</td>
+						<td>1234567890</td>
+						<td>09 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">586</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="585" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=585" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=585" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>hi</td>
+						<td>ha</td>
+						<td>hieur88@gmail.com</td>
+						<td>0976582585</td>
+						<td>08 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">585</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="584" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=584" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=584" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Faiz</td>
+						<td>Hassan</td>
+						<td>faizi.qau@gmail.com</td>
+						<td>+456799999888</td>
+						<td>07 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">584</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="582" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=582" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=582" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Rohit</td>
+						<td>Goyal</td>
+						<td>rohit157.rg@gmail.com</td>
+						<td>+919782211063</td>
+						<td>04 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">582</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="583" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=583" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=583" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Mazen</td>
+						<td>Said</td>
+						<td>mazensaid87@gmail.com</td>
+						<td>+96896986558</td>
+						<td>04 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">583</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="581" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=581" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=581" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Sandeep</td>
+						<td>Dillerao</td>
+						<td>sandydillerao@gmail.com</td>
+						<td>08483094292</td>
+						<td>03 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">581</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="578" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=578" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=578" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>asdf</td>
+						<td>asdf</td>
+						<td>1111@1111.com</td>
+						<td>1234534534</td>
+						<td>01 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">578</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="579" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=579" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=579" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>prithvi</td>
+						<td>prithvi</td>
+						<td>prithvir@sveltoz.com</td>
+						<td>1234567890</td>
+						<td>01 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">579</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="580" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=580" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=580" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Test da Silva</td>
+						<td>Sauro</td>
+						<td>b993879@nwytg.com</td>
+						<td>112132132121321</td>
+						<td>01 Mar 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">580</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="575" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=575" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=575" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Fahad</td>
+						<td>Ali</td>
+						<td>rock.star9722@gmail.com</td>
+						<td>1232133</td>
+						<td>28 Feb 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">575</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="576" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=576" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=576" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>siva</td>
+						<td>psr</td>
+						<td>graffayinfotech@gmail.com</td>
+						<td>5656565656</td>
+						<td>28 Feb 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">576</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="577" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=577" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=577" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Struk</td>
+						<td>Vadim</td>
+						<td>gotolviv@gmail.com</td>
+						<td>+441582227701</td>
+						<td>28 Feb 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">577</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="571" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=571" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=571" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>Nahid</td>
+						<td>Nahid</td>
+						<td>sunhillbd@gmail.com</td>
+						<td>234234</td>
+						<td>27 Feb 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">571</td>
+					</tr>
+										<tr>
+						<td class="action"><input type="checkbox" value="572" name="delete[]">&nbsp;&nbsp;&nbsp;
+							<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/customers/edit?id=572" data-original-title="Edit"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;
+							<a class="btn btn-info disabled" title="" href="https://demo.tastyigniter.com/admin/customers/login?id=572" target="_blank" data-original-title="Login as Customer"><i class="fa fa-user"></i>&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+						</td>
+						<td>MohamedS</td>
+						<td>Sayed</td>
+						<td>sudan@sudan.com</td>
+						<td>01236549</td>
+						<td>27 Feb 18</td>
+						<td class="text-center">Enabled</td>
+						<td class="id">572</td>
+					</tr>
+															</tbody>
+				</table>
+				</div>
+			</form>
+
+			<div class="pagination-bar clearfix">
+				<div class="links"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="https://demo.tastyigniter.com/admin/customers?&amp;page=2" data-ci-pagination-page="2">2</a></li><li><a href="https://demo.tastyigniter.com/admin/customers?&amp;page=3" data-ci-pagination-page="3">3</a></li><li><a href="https://demo.tastyigniter.com/admin/customers?&amp;page=4" data-ci-pagination-page="4">4</a></li><li><a href="https://demo.tastyigniter.com/admin/customers?&amp;page=5" data-ci-pagination-page="5">5</a></li><li><a href="https://demo.tastyigniter.com/admin/customers?&amp;page=2" data-ci-pagination-page="2" rel="next"><i class="fa fa-angle-right"></i></a></li><li><a href="https://demo.tastyigniter.com/admin/customers?&amp;page=27" data-ci-pagination-page="27"><i class="fa fa-angle-double-right"></i></a></li></ul></div>
+				<div class="info"><span>Displaying 1 to 20 of 530</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"><!--
+function filterList() {
+	$('#filter-form').submit();
+}
+//--></script>
+</div>
+<div id="footer" class="">
+	<div class="row navbar-footer">
+		<div class="col-sm-12 text-version">
+			<p class="col-xs-9 wrap-none">Thank you for using <a target="_blank" href="http://tastyigniter.com/">TastyIgniter</a></p>
+			<p class="col-xs-3 text-right wrap-none">Version 2.1.1</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	if (document.location.toString().toLowerCase().indexOf(active_menu, 1) != -1) {
+		$('#side-menu .' + active_menu).addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').parent().addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+    }
+
+    if (window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		$('html,body').animate({scrollTop: $('#wrapper').offset().top - 45}, 800);
+        $('#nav-tabs a[href="#'+hash+'"]').tab('show');
+    }
+
+    $('.btn-group input[type="radio"]:checked, .btn-group .active input[type="radio"]').trigger('change');
+});
+
+function confirmDelete(form) {
+	if ($('input[name="delete[]"]:checked').length && confirm('This cannot be undone! Are you sure you want to do this?')) {
+		form = (typeof form === 'undefined' || form === null) ? 'list-form' : form;
+		$('#'+form).submit();
+	} else {
+		return false;
+	}
+}
+
+function saveClose() {
+	$('#edit-form').append('<input type="hidden" name="save_close" value="1" />');
+	$('#edit-form').submit();
+}
+</script>
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>

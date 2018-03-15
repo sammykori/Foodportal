@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://demo.tastyigniter.com/admin/categories -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+	<link href="https://demo.tastyigniter.com/admin/views/themes/tastyigniter-blue/images/favicon.ico" rel="shortcut icon" type="image/ico">
+	<title>Categories ‹ Administrator Panel ‹ TastyIgniter Demo — TastyIgniter</title>
+	<link href="./admin_category_files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font-awesome-css">
+		<link href="admin_category_files/metisMenu.min.css" rel="stylesheet" type="text/css" id="metis-menu-css">
+		<link href="admin_category_files/select2.css" rel="stylesheet" type="text/css" id="select2-css">
+		<link href="admin_category_files/select2-bootstrap.css" rel="stylesheet" type="text/css" id="select2-bootstrap-css">
+		<link href="admin_category_files/jquery.raty.css" rel="stylesheet" type="text/css" id="jquery-raty-css">
+		<link href="admin_category_files/fonts.css" rel="stylesheet" type="text/css" id="fonts-css">
+		<link href="admin_category_files/stylesheet.css" rel="stylesheet" type="text/css" id="stylesheet-css">
+	<script src="admin_category_files/jquery-1.11.2.min.js.download" charset="utf-8" type="text/javascript" id="jquery-js"></script>
+		<script src="admin_category_files/bootstrap.min.js.download" charset="utf-8" type="text/javascript" id="bootstrap-js"></script>
+		<script src="admin_category_files/metisMenu.min.js.download" charset="utf-8" type="text/javascript" id="metis-menu-js"></script>
+		<script src="admin_category_files/select2.js.download" charset="utf-8" type="text/javascript" id="select-2-js"></script>
+		<script src="admin_category_files/jquery.raty.js.download" charset="utf-8" type="text/javascript" id="jquery-raty-js"></script>
+		<script src="admin_category_files/js.cookie.js.download" charset="utf-8" type="text/javascript" id="js-cookie-js"></script>
+		<script src="admin_category_files/common.js.download" charset="utf-8" type="text/javascript" id="common-js"></script>	<script type="text/javascript">
+		var js_site_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var js_base_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var active_menu = 'categories';
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[title], span[title], button[title]').tooltip({placement: 'bottom'});
+			$('select.form-control').select2({minimumResultsForSearch: 10});
+
+			$('.alert').alert();
+			$('.dropdown-toggle').dropdown();
+
+			$("#list-form td:contains('Disabled')").addClass('red');
+		});
+	</script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="wrapper" class="">
+		<nav class="navbar navbar-static-top navbar-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+					<div class="navbar-brand">
+                            <div class="navbar-logo col-xs-3">
+                                <img class="logo-image" alt="TastyIgniter" title="TastyIgniter" style="width:37px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg">
+                            </div>
+                        </div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            </div>
+
+							<div class="navbar-default sidebar" role="navigation">
+					<div class="sidebar-nav navbar-collapse">
+							<ul class="nav" id="side-menu">
+									<li>
+										<a class="dashboard admin active" href="#"><i class="fa fa-dashboard fa-fw"></i><span class="content">Dashboard</span></a>
+									</li>
+									<li><a class="kitchen"><i class="fa fa-cutlery fa-fw"></i><span class="content">Kitchen</span><span class="fa arrow"></span></a>
+										<ul class="nav nav-second-level collapse">
+											<li><a class="menus" href="admin_menu.html"><i class="fa fa-square-o fa-fw"></i>Menus</a></li>
+		
+											<li><a class="categories active" href="admin_category.html"><i class="fa fa-square-o fa-fw"></i>Categories</a></li>
+										</ul></li>
+									<li><a class="sales"><i class="fa fa-bar-chart-o fa-fw"></i><span class="content">Sales</span><span class="fa arrow"></span></a>
+												<ul class="nav nav-second-level collapse">
+													<li><a class="orders" href="admin_orders.html"><i class="fa fa-square-o fa-fw"></i>Orders</a></li>
+												</ul></li>
+									<li><a class="users"><i class="fa fa-user fa-fw"></i><span 
+										class="content">Users</span><span class="fa arrow"></span></a>
+												<ul class="nav nav-second-level collapse"><li><a class="customers" href="admin_users.html"><i class="fa fa-square-o fa-fw"></i>Customers</a></li><li><a class="activities" href="admin_activities.html"><i class="fa fa-square-o fa-fw"></i>Activities</a></li></ul></li>
+		
+												<li><a class="hidden-xs sidebar-toggle"><i class="fa fa-chevron-circle-left fa-fw"></i><span class="content">Collapse Menu</span></a></li></ul>						</div>
+				</div>
+
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown">
+						<a class="front-end" title="" href="https://demo.tastyigniter.com/" target="_blank" data-original-title="Storefront">
+							<i class="fa fa-home"></i>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle messages" data-toggle="dropdown">
+							<i class="fa fa-envelope"></i>
+                            <span class="label label-danger"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-messages">
+                            <li class="menu-header">You have  messages</li>
+                            <li class="menu-body"><ul class="menu message-list">
+            <li>There are no messages available in this folder.</li>
+        <li class="divider"></li>
+    </ul></li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/messages">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle alerts" data-toggle="dropdown">
+							<i class="fa fa-bell"></i>
+						</a>
+                        <ul class="dropdown-menu dropdown-activities">
+                            <li class="menu-header">Recent activities</li>
+                            <li class="menu-body"><ul class="menu activities-list">
+                        <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">01:46 PM&nbsp;-&nbsp;2 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:52 PM&nbsp;-&nbsp;55 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:31 PM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">11:52 AM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:50 AM&nbsp;-&nbsp;2 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> out.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:35 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:34 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:23 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+            </ul>
+</li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/activities">See all activities</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle settings" data-toggle="dropdown">
+							<i class="fa fa-cog"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-settings">
+							<li><a href="https://demo.tastyigniter.com/admin/pages">Pages</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/banners">Banners</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/layouts">Layouts</a></li>
+<!--							<li><a href="--><!--">--><!--</a></li>-->
+							<li><a href="https://demo.tastyigniter.com/admin/error_logs">Error Logs</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/settings">Settings</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-user"></i>
+						</a>
+						<ul class="dropdown-menu  dropdown-user">
+							<li>
+								<div class="row wrap-vertical text-center">
+									<div class="col-xs-12 wrap-top">
+										<img class="img-rounded" src="./admin_category_files/7c4ff521986b4ff8d29440beec01972d.png">
+									</div>
+									<div class="col-xs-12 wrap-none wrap-top wrap-right">
+										<span><strong>Demo Adminm</strong></span>
+										<span class="small"><i>(demo)</i></span><br>
+										<span class="small text-uppercase">Demo</span>
+										<span></span>
+									</div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li><a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12"><i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;Edit Details</a></li>
+							<li><a class="list-group-item-danger" href="https://demo.tastyigniter.com/admin/logout"><i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;Logout</a></li>
+							<li class="divider"></li>
+							<li><a href="http://tastyigniter.com/about/" target="_blank"><i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;About TastyIgniter</a></li>
+							<li><a href="http://docs.tastyigniter.com/" target="_blank"><i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;Documentation</a></li>
+							<li><a href="http://forum.tastyigniter.com/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;Community Support</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+				</ul>
+
+				<h1 class="navbar-heading">
+					Categories
+									</h1>
+					</nav>
+
+		<div id="page-wrapper" style="min-height: 513px; height: 100%;">
+							<div class="page-header clearfix">
+                    
+                   						<div class="page-action">
+                            
+                                                            <a class="btn btn-primary" href="https://demo.tastyigniter.com/admin/categories/edit"><i class="fa fa-plus"></i> New</a>
+		<a class="btn btn-danger" onclick="confirmDelete();"><i class="fa fa-trash-o"></i> Delete</a>                            						</div>
+									</div>
+
+				
+				<div id="notification">
+									</div>
+			
+<div class="row content">
+	<div class="col-md-12">
+		<div class="panel panel-default panel-table">
+			<div class="panel-heading">
+				<h3 class="panel-title">Category List</h3>
+				<div class="pull-right">
+					<button class="btn btn-filter btn-xs"><i class="fa fa-filter"></i></button>
+				</div>
+			</div>
+			<div class="panel-body panel-filter">
+				<form role="form" id="filter-form" accept-charset="utf-8" method="GET" action="https://demo.tastyigniter.com/admin/categories">
+					<div class="filter-bar">
+						<div class="form-inline">
+							<div class="row">
+								<div class="col-md-3 pull-right text-right">
+									<div class="form-group">
+										<input type="text" name="filter_search" class="form-control input-sm" value="" placeholder="Search category name, description or status.">&nbsp;&nbsp;&nbsp;
+									</div>
+									<a class="btn btn-grey" onclick="filterList();" title="" data-original-title="Search"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="col-md-8 pull-left">
+									<div class="form-group">
+										<div class="select2-container form-control input-sm" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">View all status</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><select name="filter_status" class="form-control input-sm select2-offscreen" tabindex="-1" title="">
+											<option value="">View all status</option>
+																							<option value="1">Enabled</option>
+												<option value="0">Disabled</option>
+																					</select>
+									</div>
+									<a class="btn btn-grey" onclick="filterList();" title="" data-original-title="Filter"><i class="fa fa-filter"></i></a>&nbsp;
+									<a class="btn btn-grey" href="https://demo.tastyigniter.com/admin/categories" title="" data-original-title="Clear"><i class="fa fa-times"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<form role="form" id="list-form" accept-charset="utf-8" method="POST" action="https://demo.tastyigniter.com/admin/categories">
+				<div class="table-responsive">
+				<table class="table table-striped table-border">
+					<thead>
+						<tr>
+							<th class="action"><input type="checkbox" onclick="$(&#39;input[name*=\&#39;delete\&#39;]&#39;).prop(&#39;checked&#39;, this.checked);"></th>
+							<th class="name sorter"><a class="sort" href="https://demo.tastyigniter.com/admin/categories?sort_by=name&amp;order_by=DESC">Name <i class="fa fa-sort-ASC"></i></a></th>
+                            <th width="40%">Description </th>
+                            <th>Parent </th>
+							<th class="text-center"><a class="sort" href="https://demo.tastyigniter.com/admin/categories?sort_by=priority&amp;order_by=DESC">Priority <i class="fa fa-sort-ASC"></i></a></th>
+							<th class="text-center">Status</th>
+							<th class="id"><a class="sort" href="https://demo.tastyigniter.com/admin/categories?sort_by=category_id&amp;order_by=DESC">ID <i class="fa fa-sort-ASC"></i></a></th>
+						</tr>
+					</thead>
+					<tbody>
+																		<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="15">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=15" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Appetizer</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">15</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="16">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=16" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Main Course</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">16</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="17">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=17" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Salads</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">17</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="18">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=18" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Seafoods</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">18</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="19">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=19" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Traditional</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">19</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="20">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=20" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Vegetarian</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">20</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="21">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=21" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Soups</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">21</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="22">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=22" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Desserts</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">22</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="23">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=23" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Drinks</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">23</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="24">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=24" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Specials</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">24</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="26">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=26" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Rice Dishes</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                Main Course                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">26</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="44">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=44" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Pizza</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">1</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">44</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="46">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=46" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Lanches</td>
+                            <td>Lanches..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">1</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">46</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="48">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=48" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>burger</td>
+                            <td>is burger..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">1</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">48</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="49">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=49" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Chicken</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">1</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">49</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="50">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=50" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Chinese food</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">50</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="51">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=51" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>Biryani</td>
+                            <td>..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">51</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="52">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=52" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>test</td>
+                            <td>erwerwe..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">1</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">52</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="53">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=53" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>abdalah</td>
+                            <td>asdasdas..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">53</td>
+						</tr>
+
+												<tr>
+							<td class="action"><input type="checkbox" name="delete[]" value="54">&nbsp;&nbsp;&nbsp;
+								<a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/categories/edit?id=54" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+							<td>!qwedwedwdf</td>
+                            <td>asdfasdfsdfasdf..</td>
+                            <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </td>
+							<td class="text-center">0</td>
+							<td class="text-center">Enabled</td>
+							<td class="id">54</td>
+						</tr>
+
+																	</tbody>
+				</table>
+				</div>
+			</form>
+
+			<div class="pagination-bar clearfix">
+				<div class="links"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="https://demo.tastyigniter.com/admin/categories?&amp;page=2" data-ci-pagination-page="2">2</a></li><li><a href="https://demo.tastyigniter.com/admin/categories?&amp;page=2" data-ci-pagination-page="2" rel="next"><i class="fa fa-angle-right"></i></a></li></ul></div>
+				<div class="info"><span>Displaying 1 to 20 of 34</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"><!--
+function filterList() {
+	$('#filter-form').submit();
+}
+//--></script>
+</div>
+<div id="footer" class="">
+	<div class="row navbar-footer">
+		<div class="col-sm-12 text-version">
+			<p class="col-xs-9 wrap-none">Thank you for using <a target="_blank" href="http://tastyigniter.com/">TastyIgniter</a></p>
+			<p class="col-xs-3 text-right wrap-none">Version 2.1.1</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	if (document.location.toString().toLowerCase().indexOf(active_menu, 1) != -1) {
+		$('#side-menu .' + active_menu).addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').parent().addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+    }
+
+    if (window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		$('html,body').animate({scrollTop: $('#wrapper').offset().top - 45}, 800);
+        $('#nav-tabs a[href="#'+hash+'"]').tab('show');
+    }
+
+    $('.btn-group input[type="radio"]:checked, .btn-group .active input[type="radio"]').trigger('change');
+});
+
+function confirmDelete(form) {
+	if ($('input[name="delete[]"]:checked').length && confirm('This cannot be undone! Are you sure you want to do this?')) {
+		form = (typeof form === 'undefined' || form === null) ? 'list-form' : form;
+		$('#'+form).submit();
+	} else {
+		return false;
+	}
+}
+
+function saveClose() {
+	$('#edit-form').append('<input type="hidden" name="save_close" value="1" />');
+	$('#edit-form').submit();
+}
+</script>
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>

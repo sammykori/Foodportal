@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://demo.tastyigniter.com/admin/menus -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+	<link href="https://demo.tastyigniter.com/admin/views/themes/tastyigniter-blue/images/favicon.ico" rel="shortcut icon" type="image/ico">
+	<title>Menus ‹ Administrator Panel ‹ TastyIgniter Demo — TastyIgniter</title>
+	<link href="admin_menu_files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font-awesome-css">
+		<link href="admin_menu_files/metisMenu.min.css" rel="stylesheet" type="text/css" id="metis-menu-css">
+		<link href="admin_menu_files/select2.css" rel="stylesheet" type="text/css" id="select2-css">
+		<link href="admin_menu_files/select2-bootstrap.css" rel="stylesheet" type="text/css" id="select2-bootstrap-css">
+		<link href="admin_menu_files/jquery.raty.css" rel="stylesheet" type="text/css" id="jquery-raty-css">
+		<link href="admin_menu_files/fonts.css" rel="stylesheet" type="text/css" id="fonts-css">
+		<link href="admin_menu_files/stylesheet.css" rel="stylesheet" type="text/css" id="stylesheet-css">
+	<script src="admin_menu_files/jquery-1.11.2.min.js.download" charset="utf-8" type="text/javascript" id="jquery-js"></script>
+		<script src="admin_menu_files/bootstrap.min.js.download" charset="utf-8" type="text/javascript" id="bootstrap-js"></script>
+		<script src="admin_menu_files/metisMenu.min.js.download" charset="utf-8" type="text/javascript" id="metis-menu-js"></script>
+		<script src="admin_menu_files/select2.js.download" charset="utf-8" type="text/javascript" id="select-2-js"></script>
+		<script src="admin_menu_files/jquery.raty.js.download" charset="utf-8" type="text/javascript" id="jquery-raty-js"></script>
+		<script src="admin_menu_files/js.cookie.js.download" charset="utf-8" type="text/javascript" id="js-cookie-js"></script>
+		<script src="admin_menu_files/common.js.download" charset="utf-8" type="text/javascript" id="common-js"></script>	<script type="text/javascript">
+		var js_site_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var js_base_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var active_menu = 'menus';
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[title], span[title], button[title]').tooltip({placement: 'bottom'});
+			$('select.form-control').select2({minimumResultsForSearch: 10});
+
+			$('.alert').alert();
+			$('.dropdown-toggle').dropdown();
+
+			$("#list-form td:contains('Disabled')").addClass('red');
+		});
+	</script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="wrapper" class="">
+		<nav class="navbar navbar-static-top navbar-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+                    <div class="navbar-brand">
+                            <div class="navbar-logo col-xs-3">
+                                <img class="logo-image" alt="TastyIgniter" title="TastyIgniter" style="width:37px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg">
+                            </div>
+                        </div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            </div>
+
+							<div class="navbar-default sidebar" role="navigation">
+					<div class="sidebar-nav navbar-collapse">
+                            <ul class="nav" id="side-menu">
+                                    <li>
+                                        <a class="dashboard admin active" href="#"><i class="fa fa-dashboard fa-fw"></i><span class="content">Dashboard</span></a>
+                                    </li>
+                                    <li><a class="kitchen"><i class="fa fa-cutlery fa-fw"></i><span class="content">Kitchen</span><span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level collapse">
+                                            <li><a class="menus active" href="admin_menu.html"><i class="fa fa-square-o fa-fw"></i>Menus</a></li>
+        
+                                            <li><a class="categories" href="admin_category.html"><i class="fa fa-square-o fa-fw"></i>Categories</a></li>
+                                        </ul></li>
+                                    <li><a class="sales"><i class="fa fa-bar-chart-o fa-fw"></i><span class="content">Sales</span><span class="fa arrow"></span></a>
+                                                <ul class="nav nav-second-level collapse">
+                                                    <li><a class="orders" href="admin_orders.html"><i class="fa fa-square-o fa-fw"></i>Orders</a></li>
+                                                </ul></li>
+                                    <li><a class="users"><i class="fa fa-user fa-fw"></i><span 
+                                        class="content">Users</span><span class="fa arrow"></span></a>
+                                                <ul class="nav nav-second-level collapse"><li><a class="customers" href="admin_users.html"><i class="fa fa-square-o fa-fw"></i>Customers</a></li><li><a class="activities" href="admin_activities.html"><i class="fa fa-square-o fa-fw"></i>Activities</a></li></ul></li>
+        
+                                                <li><a class="hidden-xs sidebar-toggle"><i class="fa fa-chevron-circle-left fa-fw"></i><span class="content">Collapse Menu</span></a></li></ul>						</div>
+				</div>
+
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown">
+						<a class="front-end" title="" href="https://demo.tastyigniter.com/" target="_blank" data-original-title="Storefront">
+							<i class="fa fa-home"></i>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle messages" data-toggle="dropdown">
+							<i class="fa fa-envelope"></i>
+                            <span class="label label-danger"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-messages">
+                            <li class="menu-header">You have  messages</li>
+                            <li class="menu-body"><ul class="menu message-list">
+            <li>There are no messages available in this folder.</li>
+        <li class="divider"></li>
+    </ul></li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/messages">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle alerts" data-toggle="dropdown">
+							<i class="fa fa-bell"></i>
+						</a>
+                        <ul class="dropdown-menu dropdown-activities">
+                            <li class="menu-header">Recent activities</li>
+                            <li class="menu-body"><ul class="menu activities-list">
+                        <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">01:46 PM&nbsp;-&nbsp;1 minute ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:52 PM&nbsp;-&nbsp;54 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:31 PM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">11:52 AM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:50 AM&nbsp;-&nbsp;2 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> out.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:35 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:34 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:23 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+            </ul>
+</li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/activities">See all activities</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle settings" data-toggle="dropdown">
+							<i class="fa fa-cog"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-settings">
+							<li><a href="https://demo.tastyigniter.com/admin/pages">Pages</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/banners">Banners</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/layouts">Layouts</a></li>
+<!--							<li><a href="--><!--">--><!--</a></li>-->
+							<li><a href="https://demo.tastyigniter.com/admin/error_logs">Error Logs</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/settings">Settings</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-user"></i>
+						</a>
+						<ul class="dropdown-menu  dropdown-user">
+							<li>
+								<div class="row wrap-vertical text-center">
+									<div class="col-xs-12 wrap-top">
+										<img class="img-rounded" src="./admin_menu_files/7c4ff521986b4ff8d29440beec01972d.png">
+									</div>
+									<div class="col-xs-12 wrap-none wrap-top wrap-right">
+										<span><strong>Demo Adminm</strong></span>
+										<span class="small"><i>(demo)</i></span><br>
+										<span class="small text-uppercase">Demo</span>
+										<span></span>
+									</div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li><a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12"><i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;Edit Details</a></li>
+							<li><a class="list-group-item-danger" href="https://demo.tastyigniter.com/admin/logout"><i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;Logout</a></li>
+							<li class="divider"></li>
+							<li><a href="http://tastyigniter.com/about/" target="_blank"><i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;About TastyIgniter</a></li>
+							<li><a href="http://docs.tastyigniter.com/" target="_blank"><i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;Documentation</a></li>
+							<li><a href="http://forum.tastyigniter.com/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;Community Support</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+				</ul>
+
+				<h1 class="navbar-heading">
+					Menus
+									</h1>
+					</nav>
+
+		<div id="page-wrapper" style="min-height: 513px; height: 100%;">
+							<div class="page-header clearfix">
+                    
+                   						<div class="page-action">
+                            
+                                                            <a class="btn btn-primary" href="https://demo.tastyigniter.com/admin/menus/edit"><i class="fa fa-plus"></i> New</a>
+		<a class="btn btn-danger" onclick="confirmDelete();"><i class="fa fa-trash-o"></i> Delete</a>                            						</div>
+									</div>
+
+				
+				<div id="notification">
+									</div>
+			
+    <div class="row content">
+        <div class="col-md-12">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Menu Item List</h3>
+
+                    <div class="pull-right">
+                        <button class="btn btn-filter btn-xs"><i class="fa fa-filter"></i></button>
+                    </div>
+                </div>
+                <div class="panel-body panel-filter">
+                    <form role="form" id="filter-form" accept-charset="utf-8" method="GET" action="https://demo.tastyigniter.com/admin/menus">
+                        <div class="filter-bar">
+                            <div class="form-inline">
+                                <div class="row">
+                                    <div class="col-md-3 pull-right text-right">
+                                        <div class="form-group">
+                                            <input type="text" name="filter_search" class="form-control input-sm" value="" placeholder="Search name, price or stock qty.">&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <a class="btn btn-grey" onclick="filterList();" title="" data-original-title="Search"><i class="fa fa-search"></i></a>
+                                    </div>
+                                    <div class="col-md-8 pull-left">
+                                        <div class="form-group">
+                                            <div class="select2-container form-control input-sm" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">View all categories</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><select name="filter_category" class="form-control input-sm select2-offscreen" tabindex="-1" title="">
+                                                <option value="">View all categories</option>
+                                                                                                                                                            <option value="54">!qwedwedwdf</option>
+                                                                                                                                                                                                                <option value="16">Main Course</option>
+                                                                                                                                                                                                                <option value="55">!zfsadfwefwef</option>
+                                                                                                                                                                                                                <option value="61">ggparent</option>
+                                                                                                                                                                                                                <option value="15">Appetizer</option>
+                                                                                                                                                                                                                <option value="17">Salads</option>
+                                                                                                                                                                                                                <option value="18">Seafoods</option>
+                                                                                                                                                                                                                <option value="19">Traditional</option>
+                                                                                                                                                                                                                <option value="20">Vegetarian</option>
+                                                                                                                                                                                                                <option value="21">Soups</option>
+                                                                                                                                                                                                                <option value="22">Desserts</option>
+                                                                                                                                                                                                                <option value="23">Drinks</option>
+                                                                                                                                                                                                                <option value="24">Specials</option>
+                                                                                                                                                                                                                <option value="26">Rice Dishes</option>
+                                                                                                                                                                                                                <option value="44">Pizza</option>
+                                                                                                                                                                                                                <option value="46">Lanches</option>
+                                                                                                                                                                                                                <option value="48">burger</option>
+                                                                                                                                                                                                                <option value="49">Chicken</option>
+                                                                                                                                                                                                                <option value="50">Chinese food</option>
+                                                                                                                                                                                                                <option value="51">Biryani</option>
+                                                                                                                                                                                                                <option value="52">test</option>
+                                                                                                                                                                                                                <option value="53">abdalah</option>
+                                                                                                                                                                                                                <option value="56">!asfgdfwefwef</option>
+                                                                                                                                                                                                                <option value="57">third</option>
+                                                                                                                                                                                                                <option value="58">Egyptian Foods</option>
+                                                                                                                                                                                                                <option value="59">Sub-Main Course</option>
+                                                                                                                                                                                                                <option value="60">INDIA</option>
+                                                                                                                                                                                                                <option value="62">gparent</option>
+                                                                                                                                                                                                                <option value="63">FULL BREAKFAST</option>
+                                                                                                                                                                                                                <option value="64">FULL BREAKFAST</option>
+                                                                                                                                                                                                                <option value="65">FULL BREAKFAST</option>
+                                                                                                                                                                                                                <option value="66">Demo Category</option>
+                                                                                                                                                                                                                <option value="67">CompuMatter</option>
+                                                                                                                                                                                                                <option value="68">123 MENU</option>
+                                                                                                                                                </select>&nbsp;
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="select2-container form-control input-sm" id="s2id_autogen3"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-4">View all status</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen4" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-4" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen4_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-4" id="s2id_autogen4_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-4">   </ul></div></div><select name="filter_status" class="form-control input-sm select2-offscreen" tabindex="-1" title="">
+                                                <option value="">View all status</option>
+                                                                                                    <option value="1">Enabled</option>
+                                                    <option value="0">Disabled</option>
+                                                                                            </select>
+                                        </div>
+                                        <a class="btn btn-grey" onclick="filterList();" title="" data-original-title="Filter"><i class="fa fa-filter"></i></a>&nbsp;
+                                        <a class="btn btn-grey" href="https://demo.tastyigniter.com/admin/menus" title="" data-original-title="Clear"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <form role="form" id="list-form" accept-charset="utf-8" method="POST" action="https://demo.tastyigniter.com/admin/menus">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-border">
+                            <thead>
+                            <tr>
+                                <th class="action">
+                                    <input type="checkbox" onclick="$(&#39;input[name*=\&#39;delete\&#39;]&#39;).prop(&#39;checked&#39;, this.checked);">
+                                </th>
+                                <!--<th>Photo</th>-->
+                                <th class="name">
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=menu_name&amp;order_by=DESC">Name                                        <i class="fa fa-sort-ASC"></i></a>
+                                </th>
+                                <th>
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=menu_price&amp;order_by=DESC">Price                                        <i class="fa fa-sort-ASC"></i></a>
+                                </th>
+                                <th>Category</th>
+                                <th>
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=stock_qty&amp;order_by=DESC">Stock Qty                                        <i class="fa fa-sort-ASC"></i></a>
+                                </th>
+                                <th class="text-center">Status</th>
+                                <th class="id">
+                                    <a class="sort" href="https://demo.tastyigniter.com/admin/menus?sort_by=menus.menu_id&amp;order_by=DESC">ID                                        <i class="fa fa-sort-ASC active"></i></a>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                                                                                <tr id="76">
+                                        <td class="action">
+                                            <input type="checkbox" value="76" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=76" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/puff_puff.jpg"></td>-->
+                                        <td class="name">PUFF-PUFF</td>
+                                        <td class="left">£4.99&nbsp;&nbsp;
+                                                                                            <a title="" data-original-title="Special has expired"><i class="fa fa-star fa-star-special disabled"></i></a>
+                                                                                    </td>
+                                        <td class="left"></td>
+                                        <td class="left">856</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">76</td>
+                                    </tr>
+                                                                    <tr id="77">
+                                        <td class="action">
+                                            <input type="checkbox" value="77" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=77" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/scotch_egg.jpg"></td>-->
+                                        <td class="name">SCOTCH EGG</td>
+                                        <td class="left">£2.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Appetizer</td>
+                                        <td class="left"><span class="red">-2</span></td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">77</td>
+                                    </tr>
+                                                                    <tr id="78">
+                                        <td class="action">
+                                            <input type="checkbox" value="78" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=78" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/Seared_Ahi_Spinach_Salad.jpg"></td>-->
+                                        <td class="name">ATA RICE</td>
+                                        <td class="left">£12.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Main Course</td>
+                                        <td class="left">1000</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">78</td>
+                                    </tr>
+                                                                    <tr id="79">
+                                        <td class="action">
+                                            <input type="checkbox" value="79" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=79" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/rice_and_dodo.jpg"></td>-->
+                                        <td class="name">RICE AND DODO</td>
+                                        <td class="left">£11.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Main Course</td>
+                                        <td class="left">300</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">79</td>
+                                    </tr>
+                                                                    <tr id="80">
+                                        <td class="action">
+                                            <input type="checkbox" value="80" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=80" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/deluxe_bbq_shrimp-1.jpg"></td>-->
+                                        <td class="name">Special Shrimp Deluxe</td>
+                                        <td class="left">£12.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Seafoods</td>
+                                        <td class="left">182</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">80</td>
+                                    </tr>
+                                                                    <tr id="81">
+                                        <td class="action">
+                                            <input type="checkbox" value="81" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=81" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/FriedWholeCatfishPlate_lg.jpg"></td>-->
+                                        <td class="name">Whole catfish with rice and vegetables</td>
+                                        <td class="left">£13.99&nbsp;&nbsp;
+                                                                                            <a title="" data-original-title="Special has expired"><i class="fa fa-star fa-star-special disabled"></i></a>
+                                                                                    </td>
+                                        <td class="left">Specials</td>
+                                        <td class="left"><span class="red">-4</span></td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">81</td>
+                                    </tr>
+                                                                    <tr id="82">
+                                        <td class="action">
+                                            <input type="checkbox" value="82" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=82" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src=""></td>-->
+                                        <td class="name">African Salad</td>
+                                        <td class="left">£8.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Salads</td>
+                                        <td class="left">500</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">82</td>
+                                    </tr>
+                                                                    <tr id="83">
+                                        <td class="action">
+                                            <input type="checkbox" value="83" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=83" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/seafoods_salad.JPG"></td>-->
+                                        <td class="name">Seafood Salad</td>
+                                        <td class="left">£5.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Salads</td>
+                                        <td class="left">383</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">83</td>
+                                    </tr>
+                                                                    <tr id="84">
+                                        <td class="action">
+                                            <input type="checkbox" value="84" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=84" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/eba.jpg"></td>-->
+                                        <td class="name">EBA</td>
+                                        <td class="left">£11.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Main Course</td>
+                                        <td class="left"><span class="red">0</span></td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">84</td>
+                                    </tr>
+                                                                    <tr id="85">
+                                        <td class="action">
+                                            <input type="checkbox" value="85" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=85" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/DSCF3711.JPG"></td>-->
+                                        <td class="name">AMALA</td>
+                                        <td class="left">£11.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Traditional</td>
+                                        <td class="left">440</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">85</td>
+                                    </tr>
+                                                                    <tr id="86">
+                                        <td class="action">
+                                            <input type="checkbox" value="86" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=86" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/yam_porridge.jpg"></td>-->
+                                        <td class="name">YAM PORRIDGE</td>
+                                        <td class="left">£9.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Vegetarian</td>
+                                        <td class="left">413</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">86</td>
+                                    </tr>
+                                                                    <tr id="87">
+                                        <td class="action">
+                                            <input type="checkbox" value="87" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=87" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/pesto.jpg"></td>-->
+                                        <td class="name">Boiled Plantain</td>
+                                        <td class="left">£9.99&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Traditional</td>
+                                        <td class="left">415</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">87</td>
+                                    </tr>
+                                                                    <tr id="88">
+                                        <td class="action">
+                                            <input type="checkbox" value="88" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=88" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/pounded_yam.jpg"></td>-->
+                                        <td class="name">fish</td>
+                                        <td class="left">£12.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Main Course</td>
+                                        <td class="left">10</td>
+                                        <td class="text-center red">Disabled</td>
+                                        <td class="id">88</td>
+                                    </tr>
+                                                                    <tr id="89">
+                                        <td class="action">
+                                            <input type="checkbox" value="89" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=89" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/slide2.jpg"></td>-->
+                                        <td class="name">Old Fashion Hamburguer</td>
+                                        <td class="left">£3.25&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Traditional</td>
+                                        <td class="left">2</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">89</td>
+                                    </tr>
+                                                                    <tr id="90">
+                                        <td class="action">
+                                            <input type="checkbox" value="90" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=90" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/no_photo.png"></td>-->
+                                        <td class="name">rhr</td>
+                                        <td class="left">£128.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Main Course</td>
+                                        <td class="left">509</td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">90</td>
+                                    </tr>
+                                                                    <tr id="91">
+                                        <td class="action">
+                                            <input type="checkbox" value="91" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=91" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/puff_puff.jpg"></td>-->
+                                        <td class="name">new menu</td>
+                                        <td class="left">£20.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Main Course</td>
+                                        <td class="left">1</td>
+                                        <td class="text-center red">Disabled</td>
+                                        <td class="id">91</td>
+                                    </tr>
+                                                                    <tr id="92">
+                                        <td class="action">
+                                            <input type="checkbox" value="92" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=92" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/no_photo.png"></td>-->
+                                        <td class="name">Gyros</td>
+                                        <td class="left">£3.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Appetizer</td>
+                                        <td class="left"><span class="red">0</span></td>
+                                        <td class="text-center red">Disabled</td>
+                                        <td class="id">92</td>
+                                    </tr>
+                                                                    <tr id="93">
+                                        <td class="action">
+                                            <input type="checkbox" value="93" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=93" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/short_ribs.JPG"></td>-->
+                                        <td class="name">puri</td>
+                                        <td class="left">£10.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Traditional</td>
+                                        <td class="left"><span class="red">-3</span></td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">93</td>
+                                    </tr>
+                                                                    <tr id="94">
+                                        <td class="action">
+                                            <input type="checkbox" value="94" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=94" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/short_ribs.JPG"></td>-->
+                                        <td class="name">puri</td>
+                                        <td class="left">£10.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Traditional</td>
+                                        <td class="left"><span class="red">0</span></td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">94</td>
+                                    </tr>
+                                                                    <tr id="95">
+                                        <td class="action">
+                                            <input type="checkbox" value="95" name="delete[]">&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/menus/edit?id=95" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                        </td>
+                                        <!--<td class="left"><img src="data/no_photo.png"></td>-->
+                                        <td class="name">Strudel aux pommes</td>
+                                        <td class="left">£3.00&nbsp;&nbsp;
+                                                                                    </td>
+                                        <td class="left">Desserts</td>
+                                        <td class="left"><span class="red">0</span></td>
+                                        <td class="text-center">Enabled</td>
+                                        <td class="id">95</td>
+                                    </tr>
+                                                                                        </tbody>
+                        </table>
+                    </div>
+                </form>
+
+                <div class="pagination-bar clearfix">
+                    <div class="links"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="https://demo.tastyigniter.com/admin/menus?&amp;page=2" data-ci-pagination-page="2">2</a></li><li><a href="https://demo.tastyigniter.com/admin/menus?&amp;page=3" data-ci-pagination-page="3">3</a></li><li><a href="https://demo.tastyigniter.com/admin/menus?&amp;page=4" data-ci-pagination-page="4">4</a></li><li><a href="https://demo.tastyigniter.com/admin/menus?&amp;page=5" data-ci-pagination-page="5">5</a></li><li><a href="https://demo.tastyigniter.com/admin/menus?&amp;page=2" data-ci-pagination-page="2" rel="next"><i class="fa fa-angle-right"></i></a></li><li><a href="https://demo.tastyigniter.com/admin/menus?&amp;page=8" data-ci-pagination-page="8"><i class="fa fa-angle-double-right"></i></a></li></ul></div>
+                    <div class="info"><span>Displaying 1 to 20 of 150</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript"><!--
+        function filterList() {
+            $('#filter-form').submit();
+        }
+        //--></script>
+</div>
+<div id="footer" class="">
+	<div class="row navbar-footer">
+		<div class="col-sm-12 text-version">
+			<p class="col-xs-9 wrap-none">Thank you for using <a target="_blank" href="http://tastyigniter.com/">TastyIgniter</a></p>
+			<p class="col-xs-3 text-right wrap-none">Version 2.1.1</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	if (document.location.toString().toLowerCase().indexOf(active_menu, 1) != -1) {
+		$('#side-menu .' + active_menu).addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').parent().addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+    }
+
+    if (window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		$('html,body').animate({scrollTop: $('#wrapper').offset().top - 45}, 800);
+        $('#nav-tabs a[href="#'+hash+'"]').tab('show');
+    }
+
+    $('.btn-group input[type="radio"]:checked, .btn-group .active input[type="radio"]').trigger('change');
+});
+
+function confirmDelete(form) {
+	if ($('input[name="delete[]"]:checked').length && confirm('This cannot be undone! Are you sure you want to do this?')) {
+		form = (typeof form === 'undefined' || form === null) ? 'list-form' : form;
+		$('#'+form).submit();
+	} else {
+		return false;
+	}
+}
+
+function saveClose() {
+	$('#edit-form').append('<input type="hidden" name="save_close" value="1" />');
+	$('#edit-form').submit();
+}
+</script>
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>

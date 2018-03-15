@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://demo.tastyigniter.com/admin/dashboard -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+	<link href="https://demo.tastyigniter.com/admin/views/themes/tastyigniter-blue/images/favicon.ico" rel="shortcut icon" type="image/ico">
+	<title>Dashboard ‹ Administrator Panel ‹ TastyIgniter Demo — TastyIgniter</title>
+	<link href="./admin_dash_files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font-awesome-css">
+		<link href="admin_dash_files/metisMenu.min.css" rel="stylesheet" type="text/css" id="metis-menu-css">
+		<link href="admin_dash_files/select2.css" rel="stylesheet" type="text/css" id="select2-css">
+		<link href="admin_dash_files/select2-bootstrap.css" rel="stylesheet" type="text/css" id="select2-bootstrap-css">
+		<link href="admin_dash_files/jquery.raty.css" rel="stylesheet" type="text/css" id="jquery-raty-css">
+		<link href="admin_dash_files/fonts.css" rel="stylesheet" type="text/css" id="fonts-css">
+		<link href="admin_dash_files/daterangepicker-bs3.css" rel="stylesheet" type="text/css" id="daterangepicker-css">
+		<link href="admin_dash_files/morris.css" rel="stylesheet" type="text/css" id="chart-css">
+		<link href="admin_dash_files/stylesheet.css" rel="stylesheet" type="text/css" id="stylesheet-css">
+	<script src="admin_dash_files/jquery-1.11.2.min.js.download" charset="utf-8" type="text/javascript" id="jquery-js"></script>
+		<script src="admin_dash_files/bootstrap.min.js.download" charset="utf-8" type="text/javascript" id="bootstrap-js"></script>
+		<script src="admin_dash_files/metisMenu.min.js.download" charset="utf-8" type="text/javascript" id="metis-menu-js"></script>
+		<script src="admin_dash_files/select2.js.download" charset="utf-8" type="text/javascript" id="select-2-js"></script>
+		<script src="admin_dash_files/jquery.raty.js.download" charset="utf-8" type="text/javascript" id="jquery-raty-js"></script>
+		<script src="admin_dash_files/js.cookie.js.download" charset="utf-8" type="text/javascript" id="js-cookie-js"></script>
+		<script src="admin_dash_files/common.js.download" charset="utf-8" type="text/javascript" id="common-js"></script>
+		<script src="admin_dash_files/moment.min.js.download" charset="utf-8" type="text/javascript" id="daterange-moment-js"></script>
+		<script src="admin_dash_files/daterangepicker.js.download" charset="utf-8" type="text/javascript" id="daterangepicker-js"></script>
+		<script src="admin_dash_files/raphael-min.js.download" charset="utf-8" type="text/javascript" id="raphael-min-js"></script>
+		<script src="admin_dash_files/morris.min.js.download" charset="utf-8" type="text/javascript" id="morris-min-js"></script>	<script type="text/javascript">
+		var js_site_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var js_base_url = function(str) {
+			var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+			return strTmp;
+		};
+
+		var active_menu = 'dashboard';
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[title], span[title], button[title]').tooltip({placement: 'bottom'});
+			$('select.form-control').select2({minimumResultsForSearch: 10});
+
+			$('.alert').alert();
+			$('.dropdown-toggle').dropdown();
+
+			$("#list-form td:contains('Disabled')").addClass('red');
+		});
+	</script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="wrapper" class="hide-sidebar">
+		<nav class="navbar navbar-static-top navbar-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+                    <div class="navbar-brand">
+                            <div class="navbar-logo col-xs-3">
+                                <img class="logo-image" alt="TastyIgniter" title="TastyIgniter" style="width:37px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg">
+                            </div>
+                        </div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+            </div>
+
+							<div class="navbar-default sidebar" role="navigation">
+					<div class="sidebar-nav navbar-collapse">
+						<ul class="nav" id="side-menu">
+                            <li>
+                                <a class="dashboard admin active" href="#"><i class="fa fa-dashboard fa-fw"></i><span class="content">Dashboard</span></a>
+                            </li>
+                            <li><a class="kitchen"><i class="fa fa-cutlery fa-fw"></i><span class="content">Kitchen</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li><a class="menus" href="admin_menu.html"><i class="fa fa-square-o fa-fw"></i>Menus</a></li>
+
+                                    <li><a class="categories" href="admin_category.html"><i class="fa fa-square-o fa-fw"></i>Categories</a></li>
+                                </ul></li>
+                            <li><a class="sales"><i class="fa fa-bar-chart-o fa-fw"></i><span class="content">Sales</span><span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level collapse">
+                                            <li><a class="orders" href="admin_orders.html"><i class="fa fa-square-o fa-fw"></i>Orders</a></li>
+                                        </ul></li>
+                            <li><a class="users"><i class="fa fa-user fa-fw"></i><span 
+                                class="content">Users</span><span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level collapse"><li><a class="customers" href="admin_users.html"><i class="fa fa-square-o fa-fw"></i>Customers</a></li><li><a class="activities" href="admin_activities.html"><i class="fa fa-square-o fa-fw"></i>Activities</a></li></ul></li>
+
+                                        <li><a class="hidden-xs sidebar-toggle"><i class="fa fa-chevron-circle-left fa-fw"></i><span class="content">Collapse Menu</span></a></li></ul>					</div>
+				</div>
+
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown">
+						<a class="front-end" title="" href="admin_dash.html" target="_blank" data-original-title="Storefront">
+							<i class="fa fa-home"></i>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle messages" data-toggle="dropdown">
+							<i class="fa fa-envelope"></i>
+                            <span class="label label-danger"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-messages">
+                            <li class="menu-header">You have  messages</li>
+                            <li class="menu-body"><ul class="menu message-list">
+            <li>There are no messages available in this folder.</li>
+        <li class="divider"></li>
+    </ul></li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/messages">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle alerts" data-toggle="dropdown">
+							<i class="fa fa-bell"></i>
+						</a>
+                        <ul class="dropdown-menu dropdown-activities">
+                            <li class="menu-header">Recent activities</li>
+                            <li class="menu-body"><ul class="menu activities-list">
+                        <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">01:46 PM&nbsp;-&nbsp;5 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:52 PM&nbsp;-&nbsp;58 minutes ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">12:31 PM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">11:52 AM&nbsp;-&nbsp;1 hour ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:50 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> out.                        <span class="activity-time text-muted small">
+                            <span class="small">10:46 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:35 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:34 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+                    <li class="unread">
+                <div class="clearfix">
+                    <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                        <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                        <span class="activity-time text-muted small">
+                            <span class="small">10:23 AM&nbsp;-&nbsp;3 hours ago</span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="divider"></li>
+            </ul>
+</li>
+                            <li class="menu-footer">
+                                <a class="text-center" href="https://demo.tastyigniter.com/admin/activities">See all activities</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li class="dropdown">
+						<a class="dropdown-toggle settings" data-toggle="dropdown">
+							<i class="fa fa-cog"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-settings">
+							<li><a href="https://demo.tastyigniter.com/admin/pages">Pages</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/banners">Banners</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/layouts">Layouts</a></li>
+<!--							<li><a href="--><!--">--><!--</a></li>-->
+							<li><a href="https://demo.tastyigniter.com/admin/error_logs">Error Logs</a></li>
+							<li><a href="https://demo.tastyigniter.com/admin/settings">Settings</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-user"></i>
+						</a>
+						<ul class="dropdown-menu  dropdown-user">
+							<li>
+								<div class="row wrap-vertical text-center">
+									<div class="col-xs-12 wrap-top">
+										<img class="img-rounded" src="./admin_dash_files/7c4ff521986b4ff8d29440beec01972d.png">
+									</div>
+									<div class="col-xs-12 wrap-none wrap-top wrap-right">
+										<span><strong>Demo Adminm</strong></span>
+										<span class="small"><i>(demo)</i></span><br>
+										<span class="small text-uppercase">Demo</span>
+										<span></span>
+									</div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li><a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12"><i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;Edit Details</a></li>
+							<li><a class="list-group-item-danger" href="https://demo.tastyigniter.com/admin/logout"><i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;Logout</a></li>
+							<li class="divider"></li>
+							<li><a href="http://tastyigniter.com/about/" target="_blank"><i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;About TastyIgniter</a></li>
+							<li><a href="http://docs.tastyigniter.com/" target="_blank"><i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;Documentation</a></li>
+							<li><a href="http://forum.tastyigniter.com/" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;Community Support</a></li>
+							<li class="menu-footer"></li>
+						</ul>
+					</li>
+				</ul>
+
+				<h1 class="navbar-heading">
+					Dashboard
+									</h1>
+					</nav>
+
+		<div id="page-wrapper" style="min-height: 513px; height: 100%;">
+							<div class="page-header clearfix">
+                    
+                   						<div class="page-action">
+                            
+                                                            <a class="btn btn-default" href="https://demo.tastyigniter.com/admin/updates"><i class="fa fa-refresh"></i> Check Updates</a>                            						</div>
+									</div>
+
+				
+				<div id="notification">
+									</div>
+			
+<div class="row content dashboard">
+	<div class="col-md-12">
+        <div class="row mini-statistics">
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4 stat-icon">
+                                <span class="bg-red"><i class="fa fa-line-chart fa-2x"></i></span>
+                            </div>
+                            <div class="col-xs-8 stat-content">
+                                <span class="stat-text text-red sales">£16.99</span>
+                                <span class="stat-heading text-red">Total Sales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4 stat-icon">
+                                <span class="bg-blue"><i class="stat-icon fa fa-users fa-2x"></i></span>
+                            </div>
+                            <div class="col-xs-8 stat-content">
+                                <span class="stat-text text-blue customers">0</span>
+                                <span class="stat-heading text-blue">Total Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4 stat-icon">
+                                <span class="bg-green"><i class="stat-icon fa fa-shopping-cart fa-2x"></i></span>
+                            </div>
+                            <div class="col-xs-8 stat-content">
+                                <span class="stat-text text-green orders">1</span>
+                                <span class="stat-heading text-green">Total Orders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4 stat-icon">
+                                <span class="bg-primary"><i class="stat-icon fa fa-calendar fa-2x"></i></span>
+                            </div>
+                            <div class="col-xs-8 stat-content">
+                                <span class="stat-text text-primary tables_reserved">0</span>
+                                <span class="stat-heading text-primary">Total Reservations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row statistics">
+        	<div class="col-sm-12 col-md-8">
+                <div class="panel panel-default panel-chart">
+                    <div class="panel-heading">
+                        <div class="form-inline">
+                            <div class="row">
+                                <div class="col-md-4 pull-left">
+                                    <h3 class="panel-title"><i class="fa fa-line-chart"></i>&nbsp;&nbsp;Reports Chart</h3>
+                                </div>
+
+                                <div class="col-md-5 pull-right text-right">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <button class="btn btn-default btn-xs daterange">
+                                                <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span>February 12, 2018 - March 13, 2018</span>&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="chart-legend"></div>
+                        <div class="chart-responsive">
+                            <div id="chart-holder" width="600px" height="295px" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="342" version="1.1" width="807" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.4</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="26.171875" y="307" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.671875,307H782" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.171875" y="236.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.671875,236.5H782" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.171875" y="166" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.671875,166H782" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.171875" y="95.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.671875,95.5H782" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.171875" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.671875,25H782" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="782" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">13 Mar</tspan></text><text x="705.1039870689656" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10 Mar</tspan></text><text x="628.207974137931" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">07 Mar</tspan></text><text x="551.3119612068966" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">04 Mar</tspan></text><text x="474.4159482758621" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">01 Mar</tspan></text><text x="397.5199353448276" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">26 Feb</tspan></text><text x="320.62392241379314" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">23 Feb</tspan></text><text x="243.72790948275863" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20 Feb</tspan></text><text x="166.83189655172416" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">17 Feb</tspan></text><text x="89.93588362068965" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">14 Feb</tspan></text><path fill="#db9997" stroke="none" d="M38.671875,119C45.079876077586206,113.125,57.89587823275862,83.75,64.30387931034483,95.5C70.71188038793103,107.25,83.52788254310344,195.375,89.93588362068965,213C96.34388469827586,230.625,109.15988685344828,233.5625,115.56788793103449,236.5C121.9758890086207,239.4375,134.7918911637931,251.1875,141.1998922413793,236.5C147.60789331896552,221.8125,160.42389547413794,124.875,166.83189655172416,119C173.23989762931035,113.125,186.0558997844828,174.8125,192.46390086206898,189.5C198.87190193965517,204.1875,211.68790409482762,224.75,218.0959051724138,236.5C224.50390625,248.25,237.31990840517244,289.375,243.72790948275863,283.5C250.13591056034485,277.625,262.95191271551727,192.4375,269.3599137931035,189.5C275.7679148706897,186.5625,288.5839170258621,248.25,294.9919181034483,260C301.39991918103453,271.75,314.2159213362069,280.5625,320.62392241379314,283.5C327.03192349137936,286.4375,339.84792564655174,289.375,346.25592672413796,283.5C352.6639278017242,277.625,365.47992995689657,239.4375,371.8879310344828,236.5C378.295932112069,233.5625,391.1119342672414,262.9375,397.5199353448276,260C403.92793642241384,257.0625,416.7439385775862,227.6875,423.15193965517244,213C429.55994073275866,198.3125,442.37594288793105,145.4375,448.78394396551727,142.5C455.1919450431035,139.5625,468.0079471982759,174.8125,474.4159482758621,189.5C480.8239493534483,204.1875,493.6399515086207,248.25,500.0479525862069,260C506.45595366379314,271.75,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,230.62500000000003,551.3119612068966,213C557.7199622844828,195.37500000000003,570.5359644396552,139.5625,576.9439655172414,142.5C583.3519665948277,145.4375,596.16796875,242.375,602.5759698275863,236.5C608.9839709051724,230.625,621.7999730603449,92.5625,628.207974137931,95.5C634.6159752155172,98.4375,647.4319773706898,242.37499999999997,653.8399784482759,260C660.2479795258621,277.62499999999994,673.0639816810345,242.375,679.4719827586207,236.5C685.879983836207,230.625,698.6959859913793,230.62500000000003,705.1039870689656,213C711.5119881465517,195.37500000000003,724.3279903017242,86.68750000000001,730.7359913793103,95.5C737.1439924568965,104.31250000000001,749.9599946120691,259.99999999999994,756.3679956896552,283.5C762.7759967672414,306.99999999999994,775.5919989224138,283.5,782,283.5L782,307L38.671875,307Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#d9534f" d="M38.671875,119C45.079876077586206,113.125,57.89587823275862,83.75,64.30387931034483,95.5C70.71188038793103,107.25,83.52788254310344,195.375,89.93588362068965,213C96.34388469827586,230.625,109.15988685344828,233.5625,115.56788793103449,236.5C121.9758890086207,239.4375,134.7918911637931,251.1875,141.1998922413793,236.5C147.60789331896552,221.8125,160.42389547413794,124.875,166.83189655172416,119C173.23989762931035,113.125,186.0558997844828,174.8125,192.46390086206898,189.5C198.87190193965517,204.1875,211.68790409482762,224.75,218.0959051724138,236.5C224.50390625,248.25,237.31990840517244,289.375,243.72790948275863,283.5C250.13591056034485,277.625,262.95191271551727,192.4375,269.3599137931035,189.5C275.7679148706897,186.5625,288.5839170258621,248.25,294.9919181034483,260C301.39991918103453,271.75,314.2159213362069,280.5625,320.62392241379314,283.5C327.03192349137936,286.4375,339.84792564655174,289.375,346.25592672413796,283.5C352.6639278017242,277.625,365.47992995689657,239.4375,371.8879310344828,236.5C378.295932112069,233.5625,391.1119342672414,262.9375,397.5199353448276,260C403.92793642241384,257.0625,416.7439385775862,227.6875,423.15193965517244,213C429.55994073275866,198.3125,442.37594288793105,145.4375,448.78394396551727,142.5C455.1919450431035,139.5625,468.0079471982759,174.8125,474.4159482758621,189.5C480.8239493534483,204.1875,493.6399515086207,248.25,500.0479525862069,260C506.45595366379314,271.75,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,230.62500000000003,551.3119612068966,213C557.7199622844828,195.37500000000003,570.5359644396552,139.5625,576.9439655172414,142.5C583.3519665948277,145.4375,596.16796875,242.375,602.5759698275863,236.5C608.9839709051724,230.625,621.7999730603449,92.5625,628.207974137931,95.5C634.6159752155172,98.4375,647.4319773706898,242.37499999999997,653.8399784482759,260C660.2479795258621,277.62499999999994,673.0639816810345,242.375,679.4719827586207,236.5C685.879983836207,230.625,698.6959859913793,230.62500000000003,705.1039870689656,213C711.5119881465517,195.37500000000003,724.3279903017242,86.68750000000001,730.7359913793103,95.5C737.1439924568965,104.31250000000001,749.9599946120691,259.99999999999994,756.3679956896552,283.5C762.7759967672414,306.99999999999994,775.5919989224138,283.5,782,283.5" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="38.671875" cy="119" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="64.30387931034483" cy="95.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="89.93588362068965" cy="213" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="115.56788793103449" cy="236.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.1998922413793" cy="236.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="166.83189655172416" cy="119" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="192.46390086206898" cy="189.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="218.0959051724138" cy="236.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="243.72790948275863" cy="283.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="269.3599137931035" cy="189.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="294.9919181034483" cy="260" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="320.62392241379314" cy="283.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="346.25592672413796" cy="283.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="371.8879310344828" cy="236.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="397.5199353448276" cy="260" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="423.15193965517244" cy="213" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="448.78394396551727" cy="142.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="474.4159482758621" cy="189.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="500.0479525862069" cy="260" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="525.6799568965517" cy="283.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="551.3119612068966" cy="213" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="576.9439655172414" cy="142.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="602.5759698275863" cy="236.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="628.207974137931" cy="95.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="653.8399784482759" cy="260" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="679.4719827586207" cy="236.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="705.1039870689656" cy="213" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="730.7359913793103" cy="95.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="756.3679956896552" cy="283.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="782" cy="283.5" r="4" fill="#d9534f" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#6496c0" stroke="none" d="M38.671875,119C45.079876077586206,113.125,57.89587823275862,83.75,64.30387931034483,95.5C70.71188038793103,107.25,83.52788254310344,195.375,89.93588362068965,213C96.34388469827586,230.625,109.15988685344828,233.5625,115.56788793103449,236.5C121.9758890086207,239.4375,134.7918911637931,251.1875,141.1998922413793,236.5C147.60789331896552,221.8125,160.42389547413794,124.875,166.83189655172416,119C173.23989762931035,113.125,186.0558997844828,174.8125,192.46390086206898,189.5C198.87190193965517,204.1875,211.68790409482762,224.75,218.0959051724138,236.5C224.50390625,248.25,237.31990840517244,289.375,243.72790948275863,283.5C250.13591056034485,277.625,262.95191271551727,192.4375,269.3599137931035,189.5C275.7679148706897,186.5625,288.5839170258621,248.25,294.9919181034483,260C301.39991918103453,271.75,314.2159213362069,280.5625,320.62392241379314,283.5C327.03192349137936,286.4375,339.84792564655174,289.375,346.25592672413796,283.5C352.6639278017242,277.625,365.47992995689657,239.4375,371.8879310344828,236.5C378.295932112069,233.5625,391.1119342672414,262.9375,397.5199353448276,260C403.92793642241384,257.0625,416.7439385775862,227.6875,423.15193965517244,213C429.55994073275866,198.3125,442.37594288793105,145.4375,448.78394396551727,142.5C455.1919450431035,139.5625,468.0079471982759,174.8125,474.4159482758621,189.5C480.8239493534483,204.1875,493.6399515086207,248.25,500.0479525862069,260C506.45595366379314,271.75,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,230.62500000000003,551.3119612068966,213C557.7199622844828,195.37500000000003,570.5359644396552,139.5625,576.9439655172414,142.5C583.3519665948277,145.4375,596.16796875,242.375,602.5759698275863,236.5C608.9839709051724,230.625,621.7999730603449,92.5625,628.207974137931,95.5C634.6159752155172,98.4375,647.4319773706898,242.37499999999997,653.8399784482759,260C660.2479795258621,277.62499999999994,673.0639816810345,242.375,679.4719827586207,236.5C685.879983836207,230.625,698.6959859913793,230.62500000000003,705.1039870689656,213C711.5119881465517,195.37500000000003,724.3279903017242,86.68750000000001,730.7359913793103,95.5C737.1439924568965,104.31250000000001,749.9599946120691,259.99999999999994,756.3679956896552,283.5C762.7759967672414,306.99999999999994,775.5919989224138,283.5,782,283.5L782,307L38.671875,307Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#337ab7" d="M38.671875,119C45.079876077586206,113.125,57.89587823275862,83.75,64.30387931034483,95.5C70.71188038793103,107.25,83.52788254310344,195.375,89.93588362068965,213C96.34388469827586,230.625,109.15988685344828,233.5625,115.56788793103449,236.5C121.9758890086207,239.4375,134.7918911637931,251.1875,141.1998922413793,236.5C147.60789331896552,221.8125,160.42389547413794,124.875,166.83189655172416,119C173.23989762931035,113.125,186.0558997844828,174.8125,192.46390086206898,189.5C198.87190193965517,204.1875,211.68790409482762,224.75,218.0959051724138,236.5C224.50390625,248.25,237.31990840517244,289.375,243.72790948275863,283.5C250.13591056034485,277.625,262.95191271551727,192.4375,269.3599137931035,189.5C275.7679148706897,186.5625,288.5839170258621,248.25,294.9919181034483,260C301.39991918103453,271.75,314.2159213362069,280.5625,320.62392241379314,283.5C327.03192349137936,286.4375,339.84792564655174,289.375,346.25592672413796,283.5C352.6639278017242,277.625,365.47992995689657,239.4375,371.8879310344828,236.5C378.295932112069,233.5625,391.1119342672414,262.9375,397.5199353448276,260C403.92793642241384,257.0625,416.7439385775862,227.6875,423.15193965517244,213C429.55994073275866,198.3125,442.37594288793105,145.4375,448.78394396551727,142.5C455.1919450431035,139.5625,468.0079471982759,174.8125,474.4159482758621,189.5C480.8239493534483,204.1875,493.6399515086207,248.25,500.0479525862069,260C506.45595366379314,271.75,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,230.62500000000003,551.3119612068966,213C557.7199622844828,195.37500000000003,570.5359644396552,139.5625,576.9439655172414,142.5C583.3519665948277,145.4375,596.16796875,242.375,602.5759698275863,236.5C608.9839709051724,230.625,621.7999730603449,92.5625,628.207974137931,95.5C634.6159752155172,98.4375,647.4319773706898,242.37499999999997,653.8399784482759,260C660.2479795258621,277.62499999999994,673.0639816810345,242.375,679.4719827586207,236.5C685.879983836207,230.625,698.6959859913793,230.62500000000003,705.1039870689656,213C711.5119881465517,195.37500000000003,724.3279903017242,86.68750000000001,730.7359913793103,95.5C737.1439924568965,104.31250000000001,749.9599946120691,259.99999999999994,756.3679956896552,283.5C762.7759967672414,306.99999999999994,775.5919989224138,283.5,782,283.5" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="38.671875" cy="119" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="64.30387931034483" cy="95.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="89.93588362068965" cy="213" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="115.56788793103449" cy="236.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.1998922413793" cy="236.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="166.83189655172416" cy="119" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="192.46390086206898" cy="189.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="218.0959051724138" cy="236.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="243.72790948275863" cy="283.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="269.3599137931035" cy="189.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="294.9919181034483" cy="260" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="320.62392241379314" cy="283.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="346.25592672413796" cy="283.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="371.8879310344828" cy="236.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="397.5199353448276" cy="260" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="423.15193965517244" cy="213" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="448.78394396551727" cy="142.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="474.4159482758621" cy="189.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="500.0479525862069" cy="260" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="525.6799568965517" cy="283.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="551.3119612068966" cy="213" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="576.9439655172414" cy="142.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="602.5759698275863" cy="236.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="628.207974137931" cy="95.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="653.8399784482759" cy="260" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="679.4719827586207" cy="236.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="705.1039870689656" cy="213" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="730.7359913793103" cy="95.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="756.3679956896552" cy="283.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="782" cy="283.5" r="4" fill="#337ab7" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#94c594" stroke="none" d="M38.671875,142.5C45.079876077586206,136.625,57.89587823275862,110.1875,64.30387931034483,119C70.71188038793103,127.8125,83.52788254310344,198.3125,89.93588362068965,213C96.34388469827586,227.6875,109.15988685344828,233.5625,115.56788793103449,236.5C121.9758890086207,239.4375,134.7918911637931,239.4375,141.1998922413793,236.5C147.60789331896552,233.5625,160.42389547413794,213,166.83189655172416,213C173.23989762931035,213,186.0558997844828,233.5625,192.46390086206898,236.5C198.87190193965517,239.4375,211.68790409482762,230.625,218.0959051724138,236.5C224.50390625,242.375,237.31990840517244,283.5,243.72790948275863,283.5C250.13591056034485,283.5,262.95191271551727,239.4375,269.3599137931035,236.5C275.7679148706897,233.5625,288.5839170258621,254.125,294.9919181034483,260C301.39991918103453,265.875,314.2159213362069,280.5625,320.62392241379314,283.5C327.03192349137936,286.4375,339.84792564655174,283.5,346.25592672413796,283.5C352.6639278017242,283.5,365.47992995689657,286.4375,371.8879310344828,283.5C378.295932112069,280.5625,391.1119342672414,268.8125,397.5199353448276,260C403.92793642241384,251.1875,416.7439385775862,221.8125,423.15193965517244,213C429.55994073275866,204.1875,442.37594288793105,189.5,448.78394396551727,189.5C455.1919450431035,189.5,468.0079471982759,201.25,474.4159482758621,213C480.8239493534483,224.75,493.6399515086207,274.6875,500.0479525862069,283.5C506.45595366379314,292.3125,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,251.18750000000003,551.3119612068966,236.5C557.7199622844828,221.81250000000003,570.5359644396552,160.125,576.9439655172414,166C583.3519665948277,171.875,596.16796875,292.3125,602.5759698275863,283.5C608.9839709051724,274.6875,621.7999730603449,98.4375,628.207974137931,95.5C634.6159752155172,92.5625,647.4319773706898,239.43749999999994,653.8399784482759,260C660.2479795258621,280.56249999999994,673.0639816810345,262.9375,679.4719827586207,260C685.879983836207,257.0625,698.6959859913793,257.06250000000006,705.1039870689656,236.5C711.5119881465517,215.93750000000006,724.3279903017242,89.62500000000001,730.7359913793103,95.5C737.1439924568965,101.37500000000001,749.9599946120691,259.99999999999994,756.3679956896552,283.5C762.7759967672414,306.99999999999994,775.5919989224138,283.5,782,283.5L782,307L38.671875,307Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#5cb85c" d="M38.671875,142.5C45.079876077586206,136.625,57.89587823275862,110.1875,64.30387931034483,119C70.71188038793103,127.8125,83.52788254310344,198.3125,89.93588362068965,213C96.34388469827586,227.6875,109.15988685344828,233.5625,115.56788793103449,236.5C121.9758890086207,239.4375,134.7918911637931,239.4375,141.1998922413793,236.5C147.60789331896552,233.5625,160.42389547413794,213,166.83189655172416,213C173.23989762931035,213,186.0558997844828,233.5625,192.46390086206898,236.5C198.87190193965517,239.4375,211.68790409482762,230.625,218.0959051724138,236.5C224.50390625,242.375,237.31990840517244,283.5,243.72790948275863,283.5C250.13591056034485,283.5,262.95191271551727,239.4375,269.3599137931035,236.5C275.7679148706897,233.5625,288.5839170258621,254.125,294.9919181034483,260C301.39991918103453,265.875,314.2159213362069,280.5625,320.62392241379314,283.5C327.03192349137936,286.4375,339.84792564655174,283.5,346.25592672413796,283.5C352.6639278017242,283.5,365.47992995689657,286.4375,371.8879310344828,283.5C378.295932112069,280.5625,391.1119342672414,268.8125,397.5199353448276,260C403.92793642241384,251.1875,416.7439385775862,221.8125,423.15193965517244,213C429.55994073275866,204.1875,442.37594288793105,189.5,448.78394396551727,189.5C455.1919450431035,189.5,468.0079471982759,201.25,474.4159482758621,213C480.8239493534483,224.75,493.6399515086207,274.6875,500.0479525862069,283.5C506.45595366379314,292.3125,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,251.18750000000003,551.3119612068966,236.5C557.7199622844828,221.81250000000003,570.5359644396552,160.125,576.9439655172414,166C583.3519665948277,171.875,596.16796875,292.3125,602.5759698275863,283.5C608.9839709051724,274.6875,621.7999730603449,98.4375,628.207974137931,95.5C634.6159752155172,92.5625,647.4319773706898,239.43749999999994,653.8399784482759,260C660.2479795258621,280.56249999999994,673.0639816810345,262.9375,679.4719827586207,260C685.879983836207,257.0625,698.6959859913793,257.06250000000006,705.1039870689656,236.5C711.5119881465517,215.93750000000006,724.3279903017242,89.62500000000001,730.7359913793103,95.5C737.1439924568965,101.37500000000001,749.9599946120691,259.99999999999994,756.3679956896552,283.5C762.7759967672414,306.99999999999994,775.5919989224138,283.5,782,283.5" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="38.671875" cy="142.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="64.30387931034483" cy="119" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="89.93588362068965" cy="213" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="115.56788793103449" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.1998922413793" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="166.83189655172416" cy="213" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="192.46390086206898" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="218.0959051724138" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="243.72790948275863" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="269.3599137931035" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="294.9919181034483" cy="260" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="320.62392241379314" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="346.25592672413796" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="371.8879310344828" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="397.5199353448276" cy="260" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="423.15193965517244" cy="213" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="448.78394396551727" cy="189.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="474.4159482758621" cy="213" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="500.0479525862069" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="525.6799568965517" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="551.3119612068966" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="576.9439655172414" cy="166" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="602.5759698275863" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="628.207974137931" cy="95.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="653.8399784482759" cy="260" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="679.4719827586207" cy="260" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="705.1039870689656" cy="236.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="730.7359913793103" cy="95.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="756.3679956896552" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="782" cy="283.5" r="4" fill="#5cb85c" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#a6c9d9" stroke="none" d="M38.671875,236.5C45.079876077586206,248.25,57.89587823275862,277.625,64.30387931034483,283.5C70.71188038793103,289.375,83.52788254310344,283.5,89.93588362068965,283.5C96.34388469827586,283.5,109.15988685344828,283.5,115.56788793103449,283.5C121.9758890086207,283.5,134.7918911637931,289.375,141.1998922413793,283.5C147.60789331896552,277.625,160.42389547413794,236.5,166.83189655172416,236.5C173.23989762931035,236.5,186.0558997844828,274.6875,192.46390086206898,283.5C198.87190193965517,292.3125,211.68790409482762,304.0625,218.0959051724138,307C224.50390625,307,237.31990840517244,307,243.72790948275863,307C250.13591056034485,301.125,262.95191271551727,262.9375,269.3599137931035,260C275.7679148706897,257.0625,288.5839170258621,277.625,294.9919181034483,283.5C301.39991918103453,289.375,314.2159213362069,304.0625,320.62392241379314,307C327.03192349137936,307,339.84792564655174,307,346.25592672413796,307C352.6639278017242,304.0625,365.47992995689657,286.4375,371.8879310344828,283.5C378.295932112069,280.5625,391.1119342672414,292.3125,397.5199353448276,283.5C403.92793642241384,274.6875,416.7439385775862,218.875,423.15193965517244,213C429.55994073275866,207.125,442.37594288793105,233.5625,448.78394396551727,236.5C455.1919450431035,239.4375,468.0079471982759,227.6875,474.4159482758621,236.5C480.8239493534483,245.3125,493.6399515086207,301.125,500.0479525862069,307C506.45595366379314,307,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,257.0625,551.3119612068966,260C557.7199622844828,262.9375,570.5359644396552,301.125,576.9439655172414,307C583.3519665948277,307,596.16796875,307,602.5759698275863,307C608.9839709051724,304.0625,621.7999730603449,286.4375,628.207974137931,283.5C634.6159752155172,280.5625,647.4319773706898,283.5,653.8399784482759,283.5C660.2479795258621,283.5,673.0639816810345,283.5,679.4719827586207,283.5C685.879983836207,283.5,698.6959859913793,292.3125,705.1039870689656,283.5C711.5119881465517,274.6875,724.3279903017242,213,730.7359913793103,213C737.1439924568965,213,749.9599946120691,271.75,756.3679956896552,283.5C762.7759967672414,295.25,775.5919989224138,301.125,782,307L782,307L38.671875,307Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#63add0" d="M38.671875,236.5C45.079876077586206,248.25,57.89587823275862,277.625,64.30387931034483,283.5C70.71188038793103,289.375,83.52788254310344,283.5,89.93588362068965,283.5C96.34388469827586,283.5,109.15988685344828,283.5,115.56788793103449,283.5C121.9758890086207,283.5,134.7918911637931,289.375,141.1998922413793,283.5C147.60789331896552,277.625,160.42389547413794,236.5,166.83189655172416,236.5C173.23989762931035,236.5,186.0558997844828,274.6875,192.46390086206898,283.5C198.87190193965517,292.3125,211.68790409482762,304.0625,218.0959051724138,307C224.50390625,307,237.31990840517244,307,243.72790948275863,307C250.13591056034485,301.125,262.95191271551727,262.9375,269.3599137931035,260C275.7679148706897,257.0625,288.5839170258621,277.625,294.9919181034483,283.5C301.39991918103453,289.375,314.2159213362069,304.0625,320.62392241379314,307C327.03192349137936,307,339.84792564655174,307,346.25592672413796,307C352.6639278017242,304.0625,365.47992995689657,286.4375,371.8879310344828,283.5C378.295932112069,280.5625,391.1119342672414,292.3125,397.5199353448276,283.5C403.92793642241384,274.6875,416.7439385775862,218.875,423.15193965517244,213C429.55994073275866,207.125,442.37594288793105,233.5625,448.78394396551727,236.5C455.1919450431035,239.4375,468.0079471982759,227.6875,474.4159482758621,236.5C480.8239493534483,245.3125,493.6399515086207,301.125,500.0479525862069,307C506.45595366379314,307,519.2719558189656,289.375,525.6799568965517,283.5C532.0879579741379,277.625,544.9039601293105,257.0625,551.3119612068966,260C557.7199622844828,262.9375,570.5359644396552,301.125,576.9439655172414,307C583.3519665948277,307,596.16796875,307,602.5759698275863,307C608.9839709051724,304.0625,621.7999730603449,286.4375,628.207974137931,283.5C634.6159752155172,280.5625,647.4319773706898,283.5,653.8399784482759,283.5C660.2479795258621,283.5,673.0639816810345,283.5,679.4719827586207,283.5C685.879983836207,283.5,698.6959859913793,292.3125,705.1039870689656,283.5C711.5119881465517,274.6875,724.3279903017242,213,730.7359913793103,213C737.1439924568965,213,749.9599946120691,271.75,756.3679956896552,283.5C762.7759967672414,295.25,775.5919989224138,301.125,782,307" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="38.671875" cy="236.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="64.30387931034483" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="89.93588362068965" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="115.56788793103449" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.1998922413793" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="166.83189655172416" cy="236.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="192.46390086206898" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="218.0959051724138" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="243.72790948275863" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="269.3599137931035" cy="260" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="294.9919181034483" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="320.62392241379314" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="346.25592672413796" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="371.8879310344828" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="397.5199353448276" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="423.15193965517244" cy="213" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="448.78394396551727" cy="236.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="474.4159482758621" cy="236.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="500.0479525862069" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="525.6799568965517" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="551.3119612068966" cy="260" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="576.9439655172414" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="602.5759698275863" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="628.207974137931" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="653.8399784482759" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="679.4719827586207" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="705.1039870689656" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="730.7359913793103" cy="213" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="756.3679956896552" cy="283.5" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="782" cy="307" r="4" fill="#63add0" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="col-sm-12 col-md-4">
+                <div class="panel panel-default panel-statistics">
+                    <div class="panel-heading">
+                        <div class="form-inline">
+                            <div class="row">
+                                <div class="col-md-5 pull-left">
+                                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>&nbsp;&nbsp;Statistics</h3>
+                                </div>
+
+                                <div class="col-md-5 pull-right text-right">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                            Range&nbsp;&nbsp;<span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-range pull-right" role="menu">
+                                            <li class="active"><a rel="today">Today</a></li>
+                                            <li><a rel="week">Week</a></li>
+                                            <li><a rel="month">Month</a></li>
+                                            <li><a rel="year">Year</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="statistics">
+                        <ul class="list-group text-sm">
+                            <li class="list-group-item">Total Sales <span class="text-red sales">£16.99</span></li>
+                            <li class="list-group-item">Total Lost Sales <span class="text-yellow lost_sales">£0.00</span></li>
+                            <li class="list-group-item">Total Cash Payments<span class="text-primary cash_payments">£16.99</span></li>
+                            <li class="list-group-item">Total Customers <span class="text-blue customers">0</span></li>
+                            <li class="list-group-item">Total Orders <span class="text-green orders">1</span></li>
+                            <li class="list-group-item">Total Delivery Orders <span class="text-success delivery_orders">0</span></li>
+                            <li class="list-group-item">Total Pick-up Orders <span class="text-info collection_orders">1</span></li>
+                            <li class="list-group-item">Total Orders Completed <span class="text-danger orders_completed">0</span></li>
+                            <li class="list-group-item">Total Table(s) Reserved<span class="text-primary tables_reserved">0</span></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading"><h3 class="panel-title">Complete Restaurant Setup</h3></div>
+						<div class="panel-body">
+                            <h5>Follow these steps to get your restaurant up &amp; running. </h5>
+						</div>
+                        <div class="list-group check-list-group">
+                            <a href="https://demo.tastyigniter.com/admin/settings#location" class="list-group-item">
+                                <span class=""><b>Your restaurant settings</b> - Let your customers know your restaurant opening times, delivery hours, preparation time and where its located.</span>
+                            </a>
+                            <a href="https://demo.tastyigniter.com/admin/menus" class="list-group-item">
+                                <span class=""><b>Add Menus</b> - Add your menu using our simple editor. Display multiple menus like delivery &amp; eat-in, includes sizes and meal options</span>
+                            </a>
+                            <a href="https://demo.tastyigniter.com/admin/themes" class="list-group-item">
+                                <span class=""><b>Design your website background</b> - Upload your own or choose a background image for your website from our gallery.</span>
+                            </a>
+                            <a href="https://demo.tastyigniter.com/admin/settings#mail" class="list-group-item">
+                                <span class=""><b>Send test email</b> - Ensure order confirmation emails are sent to customers successfully.</span>
+                            </a>
+                        </div>
+                        <div class="panel-footer"></div>
+                    </div>
+
+                    <div class="panel panel-default panel-activities">
+                        <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;Recent Activity</h3></div>
+                        <ul class="list-group">
+                                                                                                <li class="list-group-item">
+                                        <div class="clearfix">
+                                            <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                                                <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                                                <span class="activity-time text-muted small">
+                                                <span class="small">01:46 PM&nbsp;-&nbsp;5 minutes ago</span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                                    <li class="list-group-item">
+                                        <div class="clearfix">
+                                            <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                                                <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                                                <span class="activity-time text-muted small">
+                                                <span class="small">12:52 PM&nbsp;-&nbsp;58 minutes ago</span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                                    <li class="list-group-item">
+                                        <div class="clearfix">
+                                            <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                                                <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                                                <span class="activity-time text-muted small">
+                                                <span class="small">12:31 PM&nbsp;-&nbsp;1 hour ago</span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                                    <li class="list-group-item">
+                                        <div class="clearfix">
+                                            <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                                                <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                                                <span class="activity-time text-muted small">
+                                                <span class="small">11:52 AM&nbsp;-&nbsp;1 hour ago</span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                                    <li class="list-group-item">
+                                        <div class="clearfix">
+                                            <div class="activity-body"><i class="fa fa-tasks fa-fw bg-primary"></i>
+                                                <a href="https://demo.tastyigniter.com/admin/staffs/edit?id=12">Demo Adminm</a> <b>logged</b> in.                                                <span class="activity-time text-muted small">
+                                                <span class="small">10:50 AM&nbsp;-&nbsp;3 hours ago</span>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                                                    </ul>
+                        <div class="panel-footer text-right">
+                            <a href="https://demo.tastyigniter.com/admin/activities">See all activities&nbsp;<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                                            <div class="panel panel-default panel-news-feed">
+                            <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-rss"></i>&nbsp;&nbsp;TastyIgniter News</h3></div>
+                            <div class="list-group">
+                                                                    <a class="list-group-item" target="_blank" href="http://feedproxy.google.com/~r/Tastyigniter/~3/g59AwHzyWCA/how-look-local-authority-food">
+                                        <h5 class="text-primary">How to Look Like THE Local Authority on Food</h5>
+                                        <span class="text-muted">
+                                We all want to be seen as an expert...</span>
+                                    </a>
+                                                                    <a class="list-group-item" target="_blank" href="http://feedproxy.google.com/~r/Tastyigniter/~3/rU7X-ZXnVu0/identifying-who-your-target-market">
+                                        <h5 class="text-primary">Identifying Who Your Target Market Is</h5>
+                                        <span class="text-muted">
+                                No matter how much effort you put i...</span>
+                                    </a>
+                                                                    <a class="list-group-item" target="_blank" href="http://feedproxy.google.com/~r/Tastyigniter/~3/kTJBaqFgJzs/essential-components-your-restaurant-website">
+                                        <h5 class="text-primary">Essential Components on Your Restaurant Website</h5>
+                                        <span class="text-muted">
+                                Any business knows that to get ahea...</span>
+                                    </a>
+                                                                    <a class="list-group-item" target="_blank" href="http://feedproxy.google.com/~r/Tastyigniter/~3/10z7BoAPHVU/restaurant-marketing-how-gain-media-attention-and-keep-it">
+                                        <h5 class="text-primary">Restaurant Marketing: How to Gain Media Attention and Keep it</h5>
+                                        <span class="text-muted">
+                                There are a variety of ways that lo...</span>
+                                    </a>
+                                                                    <a class="list-group-item" target="_blank" href="http://feedproxy.google.com/~r/Tastyigniter/~3/oJng_FUxlp0/restaurant-management-why-you-should-be-running-customer-surveys">
+                                        <h5 class="text-primary">Restaurant Management: Why You Should Be Running Customer Surveys</h5>
+                                        <span class="text-muted">
+                                In order for a restaurant to keep o...</span>
+                                    </a>
+                                                            </div>
+                            <div class="panel-footer"></div>
+                        </div>
+                    
+                                            <div class="panel panel-default panel-top-customers">
+                            <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Top Customers</h3></div>
+                            <div class="table-responsive">
+                                <table border="0" class="table table-striped table-no-spacing">
+                                    <thead>
+                                    <tr>
+                                        <th>Customer Name</th>
+                                        <th class="text-center"># Orders</th>
+                                        <th class="text-center">Total Sale</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                                                            <tr>
+                                            <td>welcome welcome</td>
+                                            <td class="text-center">22</td>
+                                            <td class="text-center">£2,758.00</td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>Baba ganus</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">£14,244.84</td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>okok okok</td>
+                                            <td class="text-center">6</td>
+                                            <td class="text-center">£1,376.01</td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>kenyo jhhgn</td>
+                                            <td class="text-center">6</td>
+                                            <td class="text-center">£178.87</td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>test1 test2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">£369.86</td>
+                                        </tr>
+                                                                            <tr>
+                                            <td>Faiz Hassan</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">£875.28</td>
+                                        </tr>
+                                                                        </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer text-right">
+                                <a href="https://demo.tastyigniter.com/admin/customers">See all customers&nbsp;<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                                    </div>
+			</div>
+		</div>
+
+                    <div class="panel panel-default panel-orders">
+                <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;10 Latest Orders</h3></div>
+                <div class="table-responsive">
+                    <table border="0" class="table table-striped table-no-spacing">
+                        <thead>
+                        <tr>
+                            <th class="action action-one"></th>
+                            <th>ID</th>
+                            <th>Location</th>
+                            <th>Customer Name</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Type</th>
+                            <th class="text-center">Ready Time</th>
+                            <th class="text-center">Date Added</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20887" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20887</td>
+                                <td>Lewisham</td>
+                                <td>hnngvgvh asda</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #686663;">Received</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">02:50</td>
+                                <td class="text-center">Today</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20886" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20886</td>
+                                <td>Lewisham</td>
+                                <td>test1 test2</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #00a65a;">Completed</span></td>
+                                <td class="text-center">Delivery</td>
+                                <td class="text-center">19:20</td>
+                                <td class="text-center">11 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20885" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20885</td>
+                                <td>Lewisham</td>
+                                <td>test1 test2</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #00a65a;">Completed</span></td>
+                                <td class="text-center">Delivery</td>
+                                <td class="text-center">18:40</td>
+                                <td class="text-center">11 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20884" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20884</td>
+                                <td>Lewisham</td>
+                                <td>Mariano Poyales</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #686663;">Received</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">17:30</td>
+                                <td class="text-center">11 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20883" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20883</td>
+                                <td>Lewisham</td>
+                                <td>Mariano Poyales</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #686663;">Received</span></td>
+                                <td class="text-center">Delivery</td>
+                                <td class="text-center">16:40</td>
+                                <td class="text-center">11 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20882" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20882</td>
+                                <td>Lewisham</td>
+                                <td>pc pc</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #00a65a;">Completed</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">14:40</td>
+                                <td class="text-center">11 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20881" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20881</td>
+                                <td>Lewisham</td>
+                                <td>saS sa</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #686663;">Received</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">05:20</td>
+                                <td class="text-center">10 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20880" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20880</td>
+                                <td>Lewisham</td>
+                                <td>ghj hgjghj</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #686663;">Received</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">04:40</td>
+                                <td class="text-center">10 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20879" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20879</td>
+                                <td>Lewisham</td>
+                                <td>sdasdas eqwewew</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #00a65a;">Completed</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">15:20</td>
+                                <td class="text-center">09 Mar 18</td>
+                            </tr>
+                                                    <tr>
+                                <td class="action action-one"><a class="btn btn-edit" title="" href="https://demo.tastyigniter.com/admin/orders/edit?id=20878" data-original-title="Edit"><i class="fa fa-pencil"></i></a></td>
+                                <td>20878</td>
+                                <td>Hackney's Branch</td>
+                                <td>jahrah nader</td>
+                                <td class="text-center"><span class="label label-default" style="background-color: #00a65a;">Completed</span></td>
+                                <td class="text-center">Pick-up</td>
+                                <td class="text-center">15:30</td>
+                                <td class="text-center">08 Mar 18</td>
+                            </tr>
+                                                </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer text-right">
+                    <a href="https://demo.tastyigniter.com/admin/orders">See all orders&nbsp;<i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            </div>
+</div>
+<script type="text/javascript"><!--
+$(document).on('click', '.dropdown-menu-range a', function() {
+	if ($(this).parent().is(':not(.active)')) {
+		$('.dropdown-menu-range li').removeClass('active');
+		$(this).parent().addClass('active');
+		var stat_range = $(this).attr('rel');
+		getStatistics(stat_range);
+	}
+});
+
+function getStatistics(stat_range) {
+	$.ajax({
+		type: 'GET',
+		url: 'https://demo.tastyigniter.com/admin/dashboard/statistics?stat_range=' + stat_range,
+		dataType: 'json',
+		async: false,
+		success: function(json) {
+			if (json) {
+				$('#statistics .sales, .mini-statistics .sales').html(json['sales']);
+				$('#statistics .lost_sales').html(json['lost_sales']);
+                $('#statistics .cash_payments').html(json['cash_payments']);
+				$('#statistics .customers, .mini-statistics .customers').html(json['customers']);
+				$('#statistics .orders, .mini-statistics .orders').html(json['orders']);
+				$('#statistics .orders_completed').html(json['orders_completed']);
+				$('#statistics .delivery_orders').html(json['delivery_orders']);
+				$('#statistics .collection_orders').html(json['collection_orders']);
+				$('#statistics .tables_reserved, .mini-statistics .tables_reserved').html(json['tables_reserved']);
+			}
+		}
+	});
+}
+
+$(document).ready(function() {
+    $('button.daterange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    getChart(moment().subtract(29, 'days').format('YYYY-MM-DD'), moment().format('YYYY-MM-DD'));
+
+    $('button.daterange').daterangepicker({
+        format: 'DD/MM/YYYY',
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
+        showDropdowns: true,
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        opens: 'left',
+        buttonClasses: ['btn', 'btn-xs'],
+        applyClass: 'btn-primary',
+        cancelClass: 'btn-default',
+        separator: ' to ',
+        locale: {
+            applyLabel: 'Submit',
+            cancelLabel: 'Cancel',
+            fromLabel: 'From',
+            toLabel: 'To',
+            customRangeLabel: 'Custom',
+            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            firstDay: 1
+        }
+    }, function(start, end, label) {
+        $('button.daterange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    });
+
+    $('button.daterange').on('cancel.daterangepicker', function(ev, picker) {
+        $('button.daterange').val('');
+    });
+
+    $('button.daterange').on('apply.daterangepicker', function(ev, picker) {
+        getChart(picker.startDate.format('YYYY-MM-DD'), picker.endDate.format('YYYY-MM-DD'));
+    });
+
+    $('.dropdown-menu-range a[rel="today"]').trigger('click');
+});
+
+var monthNames = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+    "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+
+var myAreaChart = Morris.Area({
+    element: 'chart-holder',
+    data: [],
+    xkey: 'time',
+    ykeys: ['customers', 'orders', 'reservations', 'reviews'],
+    labels: ['Total customer', 'Total order', 'Total reservation', 'Total reviews'],
+    lineColors: ['#63ADD0', '#5CB85C', '#337AB7', '#D9534F'],
+    parseTime: false,
+    behaveLikeLine: false,
+    resize: true,
+    hideHover: true,
+});
+
+function getChart(startDate, endDate) {
+    $.ajax({
+		type: 'GET',
+		url: 'https://demo.tastyigniter.com/admin/dashboard/chart?start_date=' + startDate + '&end_date=' + endDate,
+		dataType: 'json',
+		async: false,
+		success: function(json) {
+            myAreaChart.setData(json.data);
+        }
+	});
+}
+//--></script>
+</div>
+<div id="footer" class="">
+	<div class="row navbar-footer">
+		<div class="col-sm-12 text-version">
+			<p class="col-xs-9 wrap-none">Thank you for using <a target="_blank" href="http://tastyigniter.com/">TastyIgniter</a></p>
+			<p class="col-xs-3 text-right wrap-none">Version 2.1.1</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	if (document.location.toString().toLowerCase().indexOf(active_menu, 1) != -1) {
+		$('#side-menu .' + active_menu).addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').parent().addClass('active');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+        $('#side-menu .' + active_menu).parents('.collapse').collapse('show');
+    }
+
+    if (window.location.hash) {
+        var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		$('html,body').animate({scrollTop: $('#wrapper').offset().top - 45}, 800);
+        $('#nav-tabs a[href="#'+hash+'"]').tab('show');
+    }
+
+    $('.btn-group input[type="radio"]:checked, .btn-group .active input[type="radio"]').trigger('change');
+});
+
+function confirmDelete(form) {
+	if ($('input[name="delete[]"]:checked').length && confirm('This cannot be undone! Are you sure you want to do this?')) {
+		form = (typeof form === 'undefined' || form === null) ? 'list-form' : form;
+		$('#'+form).submit();
+	} else {
+		return false;
+	}
+}
+
+function saveClose() {
+	$('#edit-form').append('<input type="hidden" name="save_close" value="1" />');
+	$('#edit-form').submit();
+}
+</script>
+
+<div class="daterangepicker dropdown-menu opensleft"><div class="calendar first left"><div class="calendar-date"><table class="table-condensed"><thead><tr><th class="prev available"><i class="fa fa-arrow-left icon icon-arrow-left glyphicon glyphicon-arrow-left"></i></th><th colspan="5" class="month"><select class="monthselect"><option value="0">January</option><option value="1" selected="selected">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="yearselect"><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018" selected="selected">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option></select></th><th class="next available"><i class="fa fa-arrow-right icon icon-arrow-right glyphicon glyphicon-arrow-right"></i></th></tr><tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr></thead><tbody><tr><td class="available off" data-title="r0c0">29</td><td class="available off" data-title="r0c1">30</td><td class="available off" data-title="r0c2">31</td><td class="available" data-title="r0c3">1</td><td class="available" data-title="r0c4">2</td><td class="available" data-title="r0c5">3</td><td class="available" data-title="r0c6">4</td></tr><tr><td class="available" data-title="r1c0">5</td><td class="available" data-title="r1c1">6</td><td class="available" data-title="r1c2">7</td><td class="available" data-title="r1c3">8</td><td class="available" data-title="r1c4">9</td><td class="available" data-title="r1c5">10</td><td class="available" data-title="r1c6">11</td></tr><tr><td class="available active start-date" data-title="r2c0">12</td><td class="available in-range" data-title="r2c1">13</td><td class="available in-range" data-title="r2c2">14</td><td class="available in-range" data-title="r2c3">15</td><td class="available in-range" data-title="r2c4">16</td><td class="available in-range" data-title="r2c5">17</td><td class="available in-range" data-title="r2c6">18</td></tr><tr><td class="available in-range" data-title="r3c0">19</td><td class="available in-range" data-title="r3c1">20</td><td class="available in-range" data-title="r3c2">21</td><td class="available in-range" data-title="r3c3">22</td><td class="available in-range" data-title="r3c4">23</td><td class="available in-range" data-title="r3c5">24</td><td class="available in-range" data-title="r3c6">25</td></tr><tr><td class="available in-range" data-title="r4c0">26</td><td class="available in-range" data-title="r4c1">27</td><td class="available in-range" data-title="r4c2">28</td><td class="available off in-range" data-title="r4c3">1</td><td class="available off in-range" data-title="r4c4">2</td><td class="available off in-range" data-title="r4c5">3</td><td class="available off in-range" data-title="r4c6">4</td></tr><tr><td class="available off in-range" data-title="r5c0">5</td><td class="available off in-range" data-title="r5c1">6</td><td class="available off in-range" data-title="r5c2">7</td><td class="available off in-range" data-title="r5c3">8</td><td class="available off in-range" data-title="r5c4">9</td><td class="available off in-range" data-title="r5c5">10</td><td class="available off in-range" data-title="r5c6">11</td></tr></tbody></table></div></div><div class="calendar second right"><div class="calendar-date"><table class="table-condensed"><thead><tr><th class="prev available"><i class="fa fa-arrow-left icon icon-arrow-left glyphicon glyphicon-arrow-left"></i></th><th colspan="5" class="month"><select class="monthselect"><option value="1">February</option><option value="2" selected="selected">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="yearselect"><option value="2018" selected="selected">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option></select></th><th class="next available"><i class="fa fa-arrow-right icon icon-arrow-right glyphicon glyphicon-arrow-right"></i></th></tr><tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr></thead><tbody><tr><td class="available off in-range" data-title="r0c0">26</td><td class="available off in-range" data-title="r0c1">27</td><td class="available off in-range" data-title="r0c2">28</td><td class="available in-range" data-title="r0c3">1</td><td class="available in-range" data-title="r0c4">2</td><td class="available in-range" data-title="r0c5">3</td><td class="available in-range" data-title="r0c6">4</td></tr><tr><td class="available in-range" data-title="r1c0">5</td><td class="available in-range" data-title="r1c1">6</td><td class="available in-range" data-title="r1c2">7</td><td class="available in-range" data-title="r1c3">8</td><td class="available in-range" data-title="r1c4">9</td><td class="available in-range" data-title="r1c5">10</td><td class="available in-range" data-title="r1c6">11</td></tr><tr><td class="available in-range" data-title="r2c0">12</td><td class="available active end-date" data-title="r2c1">13</td><td class="available" data-title="r2c2">14</td><td class="available" data-title="r2c3">15</td><td class="available" data-title="r2c4">16</td><td class="available" data-title="r2c5">17</td><td class="available" data-title="r2c6">18</td></tr><tr><td class="available" data-title="r3c0">19</td><td class="available" data-title="r3c1">20</td><td class="available" data-title="r3c2">21</td><td class="available" data-title="r3c3">22</td><td class="available" data-title="r3c4">23</td><td class="available" data-title="r3c5">24</td><td class="available" data-title="r3c6">25</td></tr><tr><td class="available" data-title="r4c0">26</td><td class="available" data-title="r4c1">27</td><td class="available" data-title="r4c2">28</td><td class="available" data-title="r4c3">29</td><td class="available" data-title="r4c4">30</td><td class="available" data-title="r4c5">31</td><td class="available off" data-title="r4c6">1</td></tr><tr><td class="available off" data-title="r5c0">2</td><td class="available off" data-title="r5c1">3</td><td class="available off" data-title="r5c2">4</td><td class="available off" data-title="r5c3">5</td><td class="available off" data-title="r5c4">6</td><td class="available off" data-title="r5c5">7</td><td class="available off" data-title="r5c6">8</td></tr></tbody></table></div></div><div class="ranges"><ul><li>Today</li><li>Yesterday</li><li>Last 7 Days</li><li class="active">Last 30 Days</li><li>This Month</li><li>Last Month</li><li>Custom</li></ul><div class="range_inputs"><div class="daterangepicker_start_input"><label for="daterangepicker_start">From</label><input class="input-mini" type="text" name="daterangepicker_start" value=""></div><div class="daterangepicker_end_input"><label for="daterangepicker_end">To</label><input class="input-mini" type="text" name="daterangepicker_end" value=""></div><button class="applyBtn btn btn-xs btn-primary">Submit</button>&nbsp;<button class="cancelBtn btn btn-xs btn-default">Cancel</button></div></div></div></body></html>

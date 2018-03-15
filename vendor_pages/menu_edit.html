@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://demo.tastyigniter.com/admin/menus/edit -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- <link href="https://demo.tastyigniter.com/admin/views/themes/tastyigniter-blue/images/favicon.ico" rel="shortcut icon" type="image/ico"> -->
+    <title>Menu: New ‹ MAnager Panel ‹ FoodExpress</title>
+    <link href="./menu_edit_files/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font-awesome-css">
+    <link href="./menu_edit_files/metisMenu.min.css" rel="stylesheet" type="text/css" id="metis-menu-css">
+    <link href="./menu_edit_files/select2.css" rel="stylesheet" type="text/css" id="select2-css">
+    <link href="./menu_edit_files/select2-bootstrap.css" rel="stylesheet" type="text/css" id="select2-bootstrap-css">
+    <link href="./menu_edit_files/jquery.raty.css" rel="stylesheet" type="text/css" id="jquery-raty-css">
+    <!-- <link href="./menu_edit_files/fonts.css" rel="stylesheet" type="text/css" id="fonts-css"> -->
+    <link href="./menu_edit_files/datepicker.css" rel="stylesheet" type="text/css" id="datepicker-css">
+    <link href="./menu_edit_files/stylesheet.css" rel="stylesheet" type="text/css" id="stylesheet-css">
+    <script src="./menu_edit_files/jquery-1.11.2.min.js.download" charset="utf-8" type="text/javascript" id="jquery-js"></script>
+    <script src="./menu_edit_files/bootstrap.min.js.download" charset="utf-8" type="text/javascript" id="bootstrap-js"></script>
+    <script src="./menu_edit_files/metisMenu.min.js.download" charset="utf-8" type="text/javascript" id="metis-menu-js"></script>
+    <script src="./menu_edit_files/select2.js.download" charset="utf-8" type="text/javascript" id="select-2-js"></script>
+    <script src="./menu_edit_files/jquery.raty.js.download" charset="utf-8" type="text/javascript" id="jquery-raty-js"></script>
+    <script src="./menu_edit_files/js.cookie.js.download" charset="utf-8" type="text/javascript" id="js-cookie-js"></script>
+    <script src="./menu_edit_files/common.js.download" charset="utf-8" type="text/javascript" id="common-js"></script>
+    <script src="./menu_edit_files/bootstrap-datepicker.js.download" charset="utf-8" type="text/javascript" id="bootstrap-datepicker-js"></script>
+    <script type="text/javascript">
+        var js_site_url = function (str) {
+            var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+            return strTmp;
+        };
+
+        var js_base_url = function (str) {
+            var strTmp = "https://demo.tastyigniter.com/admin/" + str;
+            return strTmp;
+        };
+
+        var active_menu = 'menus';
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a[title], span[title], button[title]').tooltip({
+                placement: 'bottom'
+            });
+            $('select.form-control').select2({
+                minimumResultsForSearch: 10
+            });
+
+            $('.alert').alert();
+            $('.dropdown-toggle').dropdown();
+
+            $("#list-form td:contains('Disabled')").addClass('red');
+        });
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div id="wrapper" class="">
+        <nav class="navbar navbar-static-top navbar-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                    <div class="navbar-brand">
+                            <div class="navbar-logo col-xs-3">
+                                <img class="logo-image" alt="TastyIgniter" title="TastyIgniter" style="width:37px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg">
+                            </div>
+                        </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a class="dashboard admin" href="vendor_menu.html">
+                                <i class="fa fa-dashboard fa-fw"></i>
+                                <span class="content">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="Kitchen active" href="#">
+                                <i class="fa fa-cutlery fa-fw"></i>
+                                <span class="content">Menus</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="sales" href="vendor_order.html">
+                                <i class="fa fa-bar-chart-o fa-fw"></i>
+                                <span class="content">Orders</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="hidden-xs sidebar-toggle">
+                                <i class="fa fa-chevron-circle-left fa-fw"></i>
+                                <span class="content">Collapse Menu</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-user">
+                        <li>
+                            <div class="row wrap-vertical text-center">
+                                <div class="col-xs-12 wrap-top">
+                                    <img class="img-rounded" src="./menu_edit_files/7c4ff521986b4ff8d29440beec01972d.png">
+                                </div>
+                                <div class="col-xs-12 wrap-none wrap-top wrap-right">
+                                    <span>
+                                        <strong>Demo Adminm</strong>
+                                    </span>
+                                    <span class="small">
+                                        <i>(demo)</i>
+                                    </span>
+                                    <br>
+                                    <span class="small text-uppercase">Demo</span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;Edit Details</a>
+                        </li>
+                        <li>
+                            <a class="list-group-item-danger" href="">
+                                <i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;Logout</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;About TastyIgniter</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;Community Support</a>
+                        </li>
+                        <li class="menu-footer"></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h1 class="navbar-heading">
+                Menu&nbsp;&nbsp;
+                <small> New</small>
+            </h1>
+        </nav>
+
+        <div id="page-wrapper" style="min-height: 513px; height: 100%;">
+            <div id="notification">
+            </div>
+
+            <div class="row content">
+                <div class="col-md-12">
+                    <div class="row wrap-vertical">
+                        <ul id="nav-tabs" class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#" data-toggle="tab">Menu</a>
+                               
+            
+                            </li>
+                        </ul>
+                    </div>
+                   
+
+                    <form role="form" id="edit-form"  class="dv-add-oneto:Menu:food form-horizontal">
+                        <div class="tab-content">
+                            <div id="general" class="tab-pane row wrap-all active">
+                                <div class="form-group">
+                                    <label for="input-name" class="col-sm-3 control-label">Name</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" name="name" id="input-name" class="form-control" value="" required>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                    <label for="input-description" class="col-sm-3 control-label">Description</label>
+                                    <div class="col-sm-5">
+                                        <textarea name="description" id="input-description" class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                    <label for="input-price" class="col-sm-3 control-label">Price</label>
+                                    <div class="col-sm-5">
+                                        <div class="input-group">
+                                            <input type="number" name="price" id="input-price" class="form-control" value="" required>
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-money"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <br/>
+                                <div class="form-group">
+                                        <label for="input-name" class="col-sm-3 control-label">Image</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" name="image" id="input-name" class="form-control" value="" required>
+                                        </div>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                        <label for="input-name" class="col-sm-3 control-label">Image</label>
+                                        <div class="col-sm-5" placeholder="url">
+                                            <input type="number" name="vendor" id="input-name" class="form-control" value="" required>
+                                            <input type="number" name="Menu_categories_id" id="input-name" class="form-control" value="" required>
+                                            <button type="submit" class="btn btn-primary" ><i class="fa fa-save"></i> Save</button>
+                                        </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                            <div class="dv-notify-success alert alert-success">menu added successfully</div>
+                            <div class="dv-notify alert alert-warning">Thanks for registering</div>
+                            <div class="dv-notify-failed alert alert-danger">Sorry your menu could not be added</div>
+                    </div>
+                </div>
+            </div>
+        <div>
+
+       
+      
+
+
+    <script src="https://kori123.herokuapp.com/js/devless-sdk.js" class="devless-connection" devless-con-token="7652eb1ff815652bf2ef0b15b15a7b03"  ></script>
+
+	<script>
+         document.getElementsByName("vendor")[0].value = localStorage.getItem("vendor");
+	</script>
+</body>
+
+
+</html>
